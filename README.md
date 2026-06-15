@@ -423,7 +423,7 @@ You're free to use, fork, and build on this for personal and commercial projects
 
 **B.Tech — AI**
 
-*Researcher in Adversarial ML, Geospatial AI, and LLM Systems*
+*Researcher in Adversarial ML, Geospatial AI, and LLM/NLP Systems*
 
 [![GitHub](https://img.shields.io/badge/GitHub-Ayush--2703-181717?style=for-the-badge&logo=github)](https://github.com/Ayush-2703)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-ayushsingh2703-0A66C2?style=for-the-badge&logo=linkedin)](https://linkedin.com/in/ayushsingh2703)
