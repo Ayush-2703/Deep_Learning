@@ -419,11 +419,9 @@ You're free to use, fork, and build on this for personal and commercial projects
 
 <div align="center">
 
-<img src="https://github.com/Ayush-2703.png" width="100" style="border-radius: 50%"/>
-
 ### Ayush Kumar Singh
 
-**B.Tech — AI & ML | Amity University Lucknow**
+**B.Tech — AI**
 
 *Researcher in Adversarial ML, Geospatial AI, and LLM Systems*
 
