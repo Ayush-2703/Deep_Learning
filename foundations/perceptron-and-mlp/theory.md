@@ -1,621 +1,594 @@
-# Theory: Activation Functions
+# Theory: Perceptron & Multilayer Perceptron (MLP)
 
-**Phase 1 — Topic 2 | Deep Learning Mastery Repository**
+**Phase 1 — Topic 1 | Deep Learning Mastery Repository**
 
 ---
 
 ## Table of Contents
 
-1. [Why Activation Functions Exist](#1-why-activation-functions-exist)
-2. [Desirable Properties](#2-desirable-properties)
-3. [Classic Activations](#3-classic-activations)
-4. [Modern Activations](#4-modern-activations)
-5. [Output Layer Activations](#5-output-layer-activations)
-6. [The Vanishing Gradient Problem](#6-the-vanishing-gradient-problem)
-7. [The Dead Neuron Problem](#7-the-dead-neuron-problem)
-8. [Comparative Analysis](#8-comparative-analysis)
-9. [Practical Selection Guide](#9-practical-selection-guide)
+1. [Biological Inspiration](#1-biological-inspiration)
+2. [The McCulloch-Pitts Neuron (1943)](#2-the-mcculloch-pitts-neuron-1943)
+3. [The Perceptron (Rosenblatt, 1958)](#3-the-perceptron-rosenblatt-1958)
+4. [The XOR Problem — Perceptron's Fatal Limitation](#4-the-xor-problem)
+5. [Multilayer Perceptron (MLP)](#5-multilayer-perceptron-mlp)
+6. [Universal Approximation Theorem](#6-universal-approximation-theorem)
+7. [Feedforward Architecture: End-to-End Flow](#7-feedforward-architecture-end-to-end-flow)
+8. [Key Mathematical Summary](#8-key-mathematical-summary)
+9. [Historical Timeline](#9-historical-timeline)
 
 ---
 
-## 1. Why Activation Functions Exist
+## 1. Biological Inspiration
 
-### The Linearity Collapse Theorem
+The artificial neuron is a deliberate mathematical abstraction of the biological neuron found in the human brain. Understanding the analogy provides deep intuition for why neural networks are designed the way they are.
 
-**Claim:** A deep neural network with no activation functions (or only linear activations) is equivalent to a single linear layer — regardless of depth.
+### The Biological Neuron
 
-**Proof:**
-```
-Without activations, each layer computes:
-    aˡ = Wˡ aˡ⁻¹ + bˡ
-
-Composing two layers:
-    a² = W²(W¹x + b¹) + b²
-       = W²W¹x + W²b¹ + b²
-       = W_eff x + b_eff
-
-By induction for L layers:
-    aᴸ = (Wᴸ ··· W²W¹) x + b_eff
-       =  W_combined x + b_combined
-
-∴ A depth-L linear network = A depth-1 linear network.
-```
-
-**Consequence:** No matter how many linear layers we stack, the model can only represent linear transformations. The decision boundary is always a hyperplane. XOR, circles, spirals — impossible.
-
-**Activation functions break this collapse** by introducing non-linearity after each linear transformation:
+A biological neuron has four major components:
 
 ```
-aˡ = f(Wˡ aˡ⁻¹ + bˡ)    ← f is non-linear
+                    ┌──────────────────────────────────────────────────┐
+                    │           BIOLOGICAL NEURON                      │
+                    │                                                  │
+  Incoming signals  │  Dendrites   Soma (body)   Axon hillock   Axon  │
+  from other        │     │             │               │          │   │
+  neurons ─────────►│  [receive]  [integrate]     [threshold]  [send] │
+                    │             sum of          fires if      spike  │
+                    │             weighted        sum ≥ θ      output  │
+                    │             inputs                               │
+                    └──────────────────────────────────────────────────┘
 ```
 
-Now compositions of layers cannot be collapsed into a single layer.
+### The Abstraction Map
 
-### What Non-Linearity Buys Us
+| Biological Component    | Artificial Equivalent                           | Mathematical Symbol |
+|-------------------------|------------------------------------------------|---------------------|
+| Dendrites               | Input features                                  | x₁, x₂, ..., xₙ   |
+| Synaptic strength       | Learnable connection weights                    | w₁, w₂, ..., wₙ   |
+| Cell body (soma)        | Weighted sum: aggregation                       | z = Σ wᵢxᵢ + b     |
+| Axon hillock (threshold)| Activation function (non-linearity)             | f(z)               |
+| Axon output             | Output signal (prediction)                      | a = f(z)           |
+| Synaptic plasticity     | Weight learning (backpropagation)               | Δw = η ∇w L        |
 
-| Without Activation | With Activation |
-|---|---|
-| Linear decision boundary only | Arbitrary curved boundaries |
-| Depth is redundant | Depth adds representational power |
-| Cannot solve XOR | Can solve any continuous function (UAT) |
-| Features: raw inputs | Features: hierarchical abstractions |
+**Key Insight:** A biological neuron fires an electrical spike only when the combined stimulation from its inputs exceeds an internal threshold. The artificial neuron mimics exactly this: it fires a large output only when the weighted sum of inputs is large enough.
 
 ---
 
-## 2. Desirable Properties
+## 2. The McCulloch-Pitts Neuron (1943)
 
-A good activation function ideally satisfies:
+Warren McCulloch (neuroscientist) and Walter Pitts (logician) proposed the first formal mathematical model of a neuron in 1943.
 
-| Property | Description | Why It Matters |
-|---|---|---|
-| **Non-linearity** | f(az+b) ≠ af(z)+b | Prevents linearity collapse |
-| **Differentiable** | f'(z) exists almost everywhere | Required for backpropagation |
-| **Non-saturating** | f'(z) ≠ 0 for large \|z\| | Prevents vanishing gradients |
-| **Zero-centered** | E[f(z)] ≈ 0 | Faster convergence (symmetric gradients) |
-| **Monotonic** | f'(z) ≥ 0 always | Simpler loss landscape |
-| **Computationally cheap** | Avoids exp/log when possible | Efficiency in deep nets |
-| **Bounded output** | f(z) ∈ [a, b] | Prevents activation explosion |
+### Model Definition
 
-No single activation satisfies all properties — every choice involves trade-offs.
+```
+Inputs:  x₁, x₂, ..., xₙ  ∈ {0, 1}   (binary — either fired or not)
+Weights: w₁, w₂, ..., wₙ  ∈ ℝ         (fixed, NOT learned)
+Threshold: θ               ∈ ℝ         (fixed, hand-designed)
+```
+
+**Computation:**
+
+```
+Net input:   z = Σᵢ wᵢxᵢ = w₁x₁ + w₂x₂ + ... + wₙxₙ
+
+Output:      y = { 1  if z ≥ θ      (neuron "fires")
+                 { 0  if z < θ      (neuron stays silent)
+```
+
+### What it Can Compute
+
+With properly chosen weights and thresholds, the MP neuron can compute:
+
+```
+AND gate:  x₁=1, x₂=1 → fire. Set w₁=w₂=1, θ=2
+OR gate:   x₁=1 OR x₂=1 → fire. Set w₁=w₂=1, θ=1
+NOT gate:  flip input. Set w₁=-1, θ=0
+```
+
+### Critical Limitation
+
+The McCulloch-Pitts neuron has **fixed** weights. There is no learning algorithm. An engineer must hand-design the weights for every problem. This makes it impractical for real-world tasks.
 
 ---
 
-## 3. Classic Activations
+## 3. The Perceptron (Rosenblatt, 1958)
 
-### 3.1 Heaviside Step Function
+Frank Rosenblatt at Cornell solved the MP neuron's fundamental flaw by introducing **learnable weights** and an automatic **learning rule** — the Perceptron algorithm.
+
+### 3.1 Architecture
 
 ```
-         ⎧ 1   if z ≥ 0
-H(z)  =  ⎨
-         ⎩ 0   if z < 0
-
-H'(z) = 0   everywhere (except z=0 where it's undefined)
+         x₁ ──(w₁)──┐
+         x₂ ──(w₂)──┤
+         x₃ ──(w₃)──┼──► [ Σ wᵢxᵢ + b ] ──► [ step(z) ] ──► ŷ ∈ {0, 1}
+            ⋮        │
+         xₙ ──(wₙ)──┘
+                     ▲
+                   bias b
 ```
 
-**Range:** {0, 1}
+### 3.2 Mathematical Formulation
 
-**Properties:**
-- Non-differentiable at z = 0
-- Gradient = 0 everywhere → **cannot be trained with gradient descent**
-- Historical: used in the original Perceptron (Topic 1)
-- Not used in modern networks
+**Step 1 — Linear combination (pre-activation):**
+
+```
+z = w₁x₁ + w₂x₂ + ... + wₙxₙ + b
+
+In vector notation:
+z = wᵀx + b
+
+where:
+  w = [w₁, w₂, ..., wₙ]ᵀ  ∈ ℝⁿ   (weight vector)
+  x = [x₁, x₂, ..., xₙ]ᵀ  ∈ ℝⁿ   (input vector)
+  b                         ∈ ℝ    (bias scalar)
+  z                         ∈ ℝ    (scalar net input)
+```
+
+**Step 2 — Activation (Heaviside step function):**
+
+```
+          ⎧ 1   if z ≥ 0
+ŷ = H(z) = ⎨
+          ⎩ 0   if z < 0
+```
+
+**Why a bias term?** Without b, the decision boundary is forced to pass through the origin (wᵀx = 0). Adding b gives the boundary a free offset: wᵀx + b = 0. This allows the model to learn any hyperplane, not just those through the origin.
+
+### 3.3 Decision Boundary
+
+The Perceptron classifies by finding a **hyperplane** that separates two classes:
+
+```
+Decision boundary:   wᵀx + b = 0
+
+For n=2 features (2D input space):
+  w₁x₁ + w₂x₂ + b = 0
+  → This is a line: x₂ = -(w₁/w₂)x₁ - b/w₂
+
+For n=3 features (3D input space):
+  → This is a plane
+
+For n features:
+  → This is an (n-1)-dimensional hyperplane
+```
+
+**Classification rule:**
+
+```
+ŷ = 1   if wᵀx + b ≥ 0   (point is on positive side of hyperplane)
+ŷ = 0   if wᵀx + b < 0   (point is on negative side of hyperplane)
+```
+
+### 3.4 The Perceptron Learning Rule
+
+The learning rule updates weights only when the model makes a mistake:
+
+**Algorithm:**
+
+```
+Initialize:  w ← 0ⁿ,  b ← 0,  η ∈ (0, 1]  (learning rate)
+
+Repeat for each epoch:
+  For each training sample (xᵢ, yᵢ) ∈ D:
+    
+    1. Forward pass:
+       z    = wᵀxᵢ + b
+       ŷᵢ  = step(z)   ∈ {0, 1}
+    
+    2. Compute error:
+       δ = yᵢ - ŷᵢ   ∈ {-1, 0, +1}
+    
+    3. Update parameters:
+       w ← w + η · δ · xᵢ   (weight update)
+       b ← b + η · δ         (bias update)
+
+Until: all samples correctly classified OR max_epochs reached
+```
+
+**Intuition behind the update rule:**
+
+| Scenario              | δ = y - ŷ | Effect of Update                                         |
+|-----------------------|-----------|----------------------------------------------------------|
+| Correct (y=ŷ)         | 0         | No change: w unchanged                                   |
+| False Negative (y=1, ŷ=0) | +1    | w ← w + ηx: pull boundary toward positive class          |
+| False Positive (y=0, ŷ=1) | -1    | w ← w - ηx: push boundary away from positive class       |
+
+**Geometric interpretation:** The weight vector w is always perpendicular to the decision boundary. Updating w rotates the boundary until all points are correctly classified.
+
+### 3.5 Perceptron Convergence Theorem
+
+**Theorem (Rosenblatt, 1958):**  
+If the training set D is **linearly separable**, the Perceptron Learning Algorithm will converge to a correct weight vector in a **finite number of weight updates**.
+
+**Formal bound:**  
+Let:
+- R = max‖xᵢ‖₂         (maximum L2 norm of any input vector)
+- γ = min margin         (distance from the true decision boundary to the nearest point)
+
+Then the number of misclassifications before convergence is at most:
+
+```
+T ≤ (R / γ)²
+```
+
+**Implication:** The smaller the geometric margin γ (points closer to the boundary), the harder the problem, and the more updates needed.
+
+**Critical constraint:** This theorem only holds when data is **linearly separable**. If not, the algorithm loops forever.
 
 ---
 
-### 3.2 Sigmoid (Logistic)
+## 4. The XOR Problem — Perceptron's Fatal Limitation
+
+### The XOR Truth Table
 
 ```
-                   1
-σ(z)  =  ──────────────
-               1 + e⁻ᶻ
-
-         e⁻ᶻ          1          1
-σ'(z) = ───────── = ─────── · ─────── = σ(z)(1 − σ(z))
-         (1+e⁻ᶻ)²    1+e⁻ᶻ    1+e⁻ᶻ
+  x₁  │  x₂  │  XOR Output
+───────┼───────┼────────────
+   0   │   0   │     0
+   0   │   1   │     1        ← class 1
+   1   │   0   │     1        ← class 1
+   1   │   1   │     0
 ```
 
-**Range:** (0, 1)
+**Visualized in 2D space:**
 
-**Maximum derivative:** σ'(0) = 0.25 (at z = 0)
+```
+x₂
+ 1  │  ○ (0,1)   ● (1,1)
+    │   class 1   class 0
+    │
+ 0  │  ○ (0,0)   ● (1,0)
+    │   class 0   class 1
+    └─────────────────────
+         0           1     x₁
 
-**Numerically stable implementation:**
-```python
-# Naïve: exp(-z) overflows for large negative z
-σ(z) = 1 / (1 + exp(-z))             # overflow when z → -∞
-
-# Stable: use identity 1/(1+e^{-z}) = e^z/(1+e^z)
-σ(z) = {  1/(1+exp(-z))   if z ≥ 0
-        {  exp(z)/(1+exp(z))  if z < 0
+● = class 0,   ○ = class 1
 ```
 
-**Pros:**
-- Smooth and differentiable everywhere
-- Output interpretable as probability ∈ (0, 1)
-- Historical importance; still used in output layers for binary classification
+No single straight line can separate the filled circles (class 0) from the empty circles (class 1). The XOR function is **NOT linearly separable**.
 
-**Cons:**
-- **Vanishing gradient:** σ'(z) ≤ 0.25. In a 10-layer network: (0.25)^10 ≈ 10^{-6}. Gradients disappear.
-- **Not zero-centered:** Output always positive (0 to 1) → gradients for weights always have same sign → zig-zag optimization
+**Proved by Minsky & Papert (1969)** in the book "Perceptrons" — this result effectively triggered the first AI Winter (1969–1986), as researchers concluded neural networks were fundamentally limited.
+
+### The Solution: Hidden Layers
+
+XOR can be decomposed into:
+
+```
+XOR(x₁, x₂) = AND( OR(x₁,x₂),  NAND(x₁,x₂) )
+```
+
+Each sub-function (OR, NAND) is linearly separable. By stacking neurons, we can compute XOR.
+
+**Geometric insight:** A hidden layer applies a non-linear transformation to the input space. After transformation, classes become linearly separable in the new (hidden) space.
+
+```
+Original space (XOR not separable) ──[Hidden Layer]──► Transformed space (linearly separable)
+```
+
+This is the core motivation for the **Multilayer Perceptron**.
 
 ---
 
-### 3.3 Hyperbolic Tangent (Tanh)
+## 5. Multilayer Perceptron (MLP)
+
+### 5.1 Architecture
+
+An MLP stacks multiple layers of neurons, where each layer performs a linear transformation followed by a non-linear activation.
 
 ```
-          eᶻ − e⁻ᶻ
-tanh(z) = ─────────   =   2σ(2z) − 1   (related to sigmoid)
-          eᶻ + e⁻ᶻ
+                 LAYER 0        LAYER 1         LAYER 2       LAYER 3
+                 (Input)    (Hidden Layer 1) (Hidden Layer 2) (Output)
+                 n⁰ = 3       n¹ = 4           n² = 4         n³ = 1
+                   │              │                │              │
+         x₁ ──────►●             ●                ●              │
+                   │            ● ●              ● ●             │
+         x₂ ──────►● ──────── ●   ● ─────────  ●   ● ────────► ● ──► ŷ
+                   │            ● ●              ● ●
+         x₃ ──────►●             ●                ●
 
-tanh'(z) = 1 − tanh²(z)
+                 [No computation — just passes data forward]
 ```
 
-**Range:** (−1, 1)
+**Key properties:**
+1. **Fully Connected (Dense):** Each neuron in layer l is connected to every neuron in layer l+1
+2. **No connections within a layer** (no lateral connections in feedforward networks)
+3. **No backward connections** within forward pass (no feedback — that's a recurrent network)
+4. **Non-linear activations** between layers are essential (without them, the whole network collapses to a single linear transformation)
 
-**Maximum derivative:** tanh'(0) = 1.0
+### 5.2 Notation and Dimensions
 
-**Properties:**
-- Zero-centered output (unlike sigmoid) → faster convergence in hidden layers
-- Still suffers vanishing gradient for large |z|, but gradient is 4× larger than sigmoid at z=0
-- Preferred over sigmoid for hidden layers when saturation is tolerable
-- tanh is a rescaled, shifted sigmoid: tanh(z) = 2σ(2z) - 1
+Let L = total number of layers (1-indexed, excluding the input layer).
 
-**Gradient comparison at z=2:**
 ```
-σ'(2)    = 0.105
-tanh'(2) = 0.071
+Symbol      Meaning                            Dimension
+──────────────────────────────────────────────────────────────
+n⁰          Number of input features           scalar
+nˡ          Number of neurons in layer l       scalar
+Wˡ          Weight matrix for layer l          ℝ^(nˡ × nˡ⁻¹)
+bˡ          Bias vector for layer l            ℝ^(nˡ)
+zˡ          Pre-activation vector, layer l     ℝ^(nˡ)
+aˡ          Post-activation vector, layer l    ℝ^(nˡ)
+fˡ( · )     Activation function for layer l    ℝ^(nˡ) → ℝ^(nˡ)
 ```
-Both saturate, but tanh's larger max gradient helps slightly in early training.
+
+Convention: a⁰ = x (the raw input vector).
+
+### 5.3 Forward Pass: Single Sample
+
+The forward pass computes layer-by-layer from input to output:
+
+```
+a⁰ = x                                  ← Input (no computation)
+
+For l = 1, 2, ..., L:
+    zˡ = Wˡ aˡ⁻¹ + bˡ                  ← Linear transformation
+    aˡ = fˡ(zˡ)                         ← Non-linear activation
+
+Output:  ŷ = aᴸ                          ← Final prediction
+```
+
+**Expanded for a 3-layer MLP:**
+
+```
+z¹ = W¹ x  + b¹    (W¹ ∈ ℝ^(n¹ × n⁰), b¹ ∈ ℝ^(n¹))
+a¹ = f¹(z¹)        e.g. ReLU
+
+z² = W² a¹ + b²    (W² ∈ ℝ^(n² × n¹), b² ∈ ℝ^(n²))
+a² = f²(z²)        e.g. ReLU
+
+z³ = W³ a² + b³    (W³ ∈ ℝ^(n³ × n²), b³ ∈ ℝ^(n³))
+a³ = f³(z³)        e.g. Sigmoid (output layer)
+
+ŷ = a³
+```
+
+### 5.4 Batched Forward Pass (Matrix Form)
+
+In practice, we process N samples simultaneously for efficiency (GPU parallelism):
+
+```
+Input batch:    X  ∈ ℝ^(N × n⁰)
+
+For l = 1, 2, ..., L:
+    Zˡ = A^(l-1) (Wˡ)ᵀ + bˡ       ∈ ℝ^(N × nˡ)
+                                    ↑ broadcast bias across batch
+    Aˡ = fˡ(Zˡ)                    ∈ ℝ^(N × nˡ)
+
+Output:   Ŷ = Aᴸ                   ∈ ℝ^(N × nᴸ)
+```
+
+**Tensor shape trace (example: [2, 4, 4, 1] MLP, batch size N=32):**
+
+```
+Input:       X   ─► shape (32, 2)
+After L1:    A¹  ─► shape (32, 4)     [via (32,2) × (2,4)ᵀ]
+After L2:    A²  ─► shape (32, 4)     [via (32,4) × (4,4)ᵀ]
+After L3:    Ŷ   ─► shape (32, 1)     [via (32,4) × (4,1)ᵀ]
+```
+
+### 5.5 Why Non-Linearity is Essential
+
+**Claim:** Without activation functions, a deep MLP collapses into a single linear transformation, regardless of depth.
+
+**Proof:** Without activations, each layer is: aˡ = Wˡ aˡ⁻¹ + bˡ
+
+Stacking two layers:
+```
+a² = W²(W¹x + b¹) + b²
+   = W²W¹x + W²b¹ + b²
+   = W_eff x + b_eff
+```
+
+where W_eff = W²W¹ and b_eff = W²b¹ + b².
+
+No matter how many layers, the composition of linear functions is still linear. A depth-100 linear network is equivalent to a depth-1 linear network.
+
+**Non-linear activations (ReLU, Sigmoid, Tanh) break this collapse** and allow the network to represent complex, curved decision boundaries.
+
+### 5.6 Activation Functions for MLP (Brief Overview)
+
+| Function | Formula | Output Range | Common Usage |
+|----------|---------|-------------|--------------|
+| Step     | H(z) = 1 if z≥0 else 0 | {0, 1} | Original Perceptron (not differentiable!) |
+| Sigmoid  | σ(z) = 1/(1+e⁻ᶻ) | (0, 1) | Output layer for binary classification |
+| Tanh     | tanh(z) = (eᶻ-e⁻ᶻ)/(eᶻ+e⁻ᶻ) | (-1, 1) | Hidden layers (zero-centered) |
+| ReLU     | max(0, z) | [0, ∞) | Hidden layers (modern default) |
+| Softmax  | eᶻᵢ / Σⱼ eᶻʲ | (0, 1), sums to 1 | Output layer for multi-class |
+
+*Detailed treatment of activation functions is in Topic 2.*
+
+### 5.7 Parameter Counting
+
+For an MLP with architecture [n⁰, n¹, n², ..., nᴸ]:
+
+**Per layer:**
+
+```
+Wˡ has  nˡ × nˡ⁻¹  parameters  (weight matrix)
+bˡ has  nˡ          parameters  (bias vector)
+Total per layer:  nˡ(nˡ⁻¹ + 1)
+```
+
+**Total parameters:**
+
+```
+P = Σₗ₌₁ᴸ  nˡ(nˡ⁻¹ + 1)
+```
+
+**Example — Architecture [2, 64, 64, 32, 1]:**
+
+```
+Layer 1:  64 × (2+1)  =    192 parameters
+Layer 2:  64 × (64+1) =  4,160 parameters
+Layer 3:  32 × (64+1) =  2,080 parameters
+Layer 4:   1 × (32+1) =     33 parameters
+                        ─────────────────
+Total:                    6,465 parameters
+```
+
+**Contrast with modern LLMs:** GPT-3 has ~175 billion parameters. A 6K-parameter MLP is tiny, yet sufficient for many tabular tasks.
+
+### 5.8 Why Depth > Width
+
+| Property         | Shallow (1 hidden layer)          | Deep (multiple hidden layers)          |
+|------------------|----------------------------------|----------------------------------------|
+| Approximation    | Requires exponential neurons     | Polynomial neurons suffice             |
+| Representation   | "Flat" features                  | Hierarchical features                  |
+| Generalization   | Often worse (memorizes)          | Often better (abstracts patterns)      |
+| Training         | Easier (gradient flows well)     | Harder (vanishing/exploding gradients) |
+| Example (vision) | Pixel → class directly           | Edges → Shapes → Objects → Class       |
+
+The key intuition is **compositional hierarchy**:
+- Layer 1 detects primitive patterns (edges, tones)
+- Layer 2 combines primitives into parts (corners, textures)
+- Layer 3 combines parts into wholes (objects, concepts)
+
+Each layer builds atop the previous one, creating exponentially richer representations.
 
 ---
 
-## 4. Modern Activations
+## 6. Universal Approximation Theorem
 
-### 4.1 Rectified Linear Unit (ReLU)
+### 6.1 Statement
 
-```
-ReLU(z) = max(0, z) = { z   if z > 0
-                       { 0   if z ≤ 0
+**Theorem (Cybenko, 1989; Hornik, 1991):**
 
-ReLU'(z) = { 1   if z > 0
-           { 0   if z ≤ 0
-```
-
-**Range:** [0, ∞)
-
-**Introduced:** LeCun et al. (2010), popularized by Krizhevsky (AlexNet, 2012)
-
-**Why ReLU revolutionized deep learning:**
+For any continuous function f: [0,1]ⁿ → ℝ and any ε > 0, there exists a feedforward neural network F with a single hidden layer and a **non-polynomial activation function** σ such that:
 
 ```
-With sigmoid in 10-layer net:
-  ∂L/∂W¹ ≈ (0.25)^10 · ∂L/∂aᴸ  ≈ 10⁻⁶ · (upstream gradient)
-  → Learning stops
-
-With ReLU in 10-layer net:
-  ∂L/∂W¹ = ∏ᵢ ReLU'(zⁱ) · ∂L/∂aᴸ  = ∏ᵢ {0,1} · (upstream gradient)
-  → Gradient = 1 for all active neurons → no vanishing!
+sup_{x ∈ [0,1]ⁿ} | F(x) - f(x) | < ε
 ```
 
-**Pros:**
-- No vanishing gradient for positive inputs
-- Computationally cheap: `max(0, z)` — no exponential
-- Sparse activation: ~50% of neurons are zero → efficient computation
-- Empirically trains deep networks where sigmoid/tanh fail
+where F has the form:
 
-**Cons:**
-- **Dead neurons:** If z ≤ 0 for all training inputs, gradient = 0 always → neuron never updates
-- Not zero-centered (always ≥ 0)
-- Unbounded output (can cause large activations)
+```
+F(x) = Σⱼ₌₁ᴷ αⱼ · σ(wⱼᵀx + bⱼ)
+```
+
+for some weights αⱼ, wⱼ, biases bⱼ, and sufficiently large K.
+
+### 6.2 Intuition
+
+A neural network with a single hidden layer can approximate **any** continuous function on a bounded domain to any desired accuracy, provided the hidden layer is wide enough.
+
+**Why non-polynomial activation?** Polynomials can also be universally approximating, but they cannot capture sharp transitions and generalize poorly. Non-polynomial activations (sigmoid, ReLU) are both expressive and practical.
+
+### 6.3 Critical Caveats
+
+The UAT is an **existence theorem**, not a constructive one:
+
+1. **It guarantees existence, not how to find the weights.** Gradient descent may not find the optimal weights.
+2. **Width may need to be exponentially large** in the input dimension n.
+3. **It says nothing about generalization** — approximating f on training data ≠ generalizing to new data.
+4. **Depth is more efficient than width.** A deep network with polynomial width can approximate functions that require exponential width in a shallow network.
+
+**Practical takeaway:** The UAT motivates using neural networks in principle, but does not tell us how to design or train them. That's what the rest of this curriculum addresses.
 
 ---
 
-### 4.2 Leaky ReLU
+## 7. Feedforward Architecture: End-to-End Flow
+
+### The Complete Computation Graph
 
 ```
-LeakyReLU(z) = max(αz, z) = { z    if z > 0
-                             { αz   if z ≤ 0
+───────────────────────────────────────────────────────────────────────
+                     MLP FORWARD PASS
+───────────────────────────────────────────────────────────────────────
 
-                              α ∈ (0, 1), typically 0.01
+x ─────────────────────────────────────────────────────────────────► ŷ
+       │          │              │            │            │
+    [Input]  [Linear z¹]  [Activation]  [Linear z²]  [Activation]
+               Wˡx+bˡ      f(z¹)=a¹      Wˡa¹+bˡ     f(z²)=ŷ
+               
+───────────────────────────────────────────────────────────────────────
+                     THEN: LOSS COMPUTATION
+───────────────────────────────────────────────────────────────────────
 
-LeakyReLU'(z) = { 1   if z > 0
-               { α   if z ≤ 0
+ŷ ────────────────────────────────────────────────────────────────► L
+               │                          │
+           [ŷ = model output]       [y = true label]
+           
+L = { -[y log ŷ + (1-y) log(1-ŷ)]          Binary classification (BCE)
+    { -Σₖ yₖ log ŷₖ                         Multi-class (Cross-Entropy)
+    { (1/N) Σᵢ (yᵢ - ŷᵢ)²                   Regression (MSE)
+
+───────────────────────────────────────────────────────────────────────
+                     THEN: BACKPROPAGATION
+───────────────────────────────────────────────────────────────────────
+                     ← Gradients flow RIGHT TO LEFT
+                     ← ∂L/∂W computed for each layer
+                     ← Weights updated: W ← W - η ∂L/∂W
+                     (Covered in depth in Topic 3)
+───────────────────────────────────────────────────────────────────────
 ```
 
-**Range:** (−∞, ∞)
+### Binary Cross-Entropy Loss (BCE)
 
-**Fix for dead neurons:** The gradient for z ≤ 0 is α (not 0), so neurons can always recover.
+For binary classification (output ŷ ∈ (0, 1)):
 
-**Mathematical guarantee:** `|LeakyReLU'(z)| = max(α, 1) · indicator`, so gradient is always at least α.
+```
+L = -1/N Σᵢ₌₁ᴺ [ yᵢ log(ŷᵢ) + (1-yᵢ) log(1-ŷᵢ) ]
+```
+
+**Why log?** Log is a concave function. A confident correct prediction (ŷ ≈ 1 when y=1) yields a small loss. A confident wrong prediction (ŷ ≈ 0 when y=1) yields a very large loss (log(0) → -∞). This asymmetry penalizes confident mistakes heavily.
+
+**Why not MSE for classification?** When using sigmoid output, MSE creates a flat loss landscape far from the decision boundary (sigmoid saturation causes tiny gradients). BCE does not suffer from this — gradients remain strong even when predictions are wrong.
 
 ---
 
-### 4.3 Parametric ReLU (PReLU)
+## 8. Key Mathematical Summary
 
-```
-PReLU(z) = max(αz, z)    where α is a LEARNED parameter
-```
-
-α is initialized to 0.25 and updated by backpropagation. Each neuron (or each layer) can have its own α. Subsumes both ReLU (α=0) and Leaky ReLU (α=fixed).
-
----
-
-### 4.4 Exponential Linear Unit (ELU)
-
-```
-ELU(z, α) = { z               if z > 0
-            { α(eᶻ − 1)      if z ≤ 0
-
-ELU'(z, α) = { 1               if z > 0
-             { α·eᶻ = ELU+α   if z ≤ 0
-```
-
-**Range:** (−α, ∞), typically (−1, ∞) with α=1
-
-**Key property:** Negative saturation at −α, but smooth exponential transition (not hard kink).
-
-**Advantages over ReLU:**
-- Mean activation closer to zero (negative values bring mean toward 0)
-- Smooth at z = 0 (ELU'(0) = α from left, 1 from right — still not smooth unless α=1)
-- No dead neurons
-- Better robustness to noise
+| Concept                   | Formula                                             |
+|---------------------------|-----------------------------------------------------|
+| Perceptron pre-activation | z = wᵀx + b                                        |
+| Perceptron output         | ŷ = H(z) ∈ {0, 1}                                  |
+| Perceptron update rule    | w ← w + η(y - ŷ)x,  b ← b + η(y - ŷ)             |
+| MLP layer (forward)       | aˡ = f(Wˡ aˡ⁻¹ + bˡ)                              |
+| MLP batch (forward)       | Aˡ = f(A^(l-1) (Wˡ)ᵀ + bˡ)                        |
+| Binary Cross-Entropy      | L = -[y log ŷ + (1-y) log(1-ŷ)]                    |
+| Total parameters          | P = Σₗ nˡ(nˡ⁻¹ + 1)                               |
+| UAT guarantee             | ∃F: sup\|F(x)-f(x)\| < ε with sufficient K        |
+| Convergence bound         | T ≤ (R/γ)²                                         |
 
 ---
 
-### 4.5 Scaled Exponential Linear Unit (SELU)
+## 9. Historical Timeline
 
 ```
-SELU(z) = λ · ELU(z, α)
-        = λ · { z               if z > 0
-              { α(eᶻ − 1)      if z ≤ 0
+1943  McCulloch & Pitts    → First mathematical neuron model (MP neuron)
+      Published: "A Logical Calculus of Ideas Immanent in Nervous Activity"
 
-λ = 1.0507009873554804934193349852946
-α = 1.6732632423543772848170429916717
-```
+1949  Donald Hebb          → Hebbian learning: "Neurons that fire together, wire together"
+      Foundation for synaptic weight updates
 
-**Self-normalizing property:**
+1958  Frank Rosenblatt     → Perceptron: first trainable neural model
+      Mark I Perceptron built as hardware at Cornell
 
-These specific constants were derived by Klambauer et al. (2017) by solving the fixed-point equations:
+1960  Widrow & Hoff        → ADALINE (Adaptive Linear Element): used MSE + gradient descent
+      Precursor to modern weight updates
 
-```
-E[SELU(z)] = 0    and    Var[SELU(z)] = 1
+1969  Minsky & Papert      → "Perceptrons" book: proved XOR cannot be solved by 1-layer networks
+      Triggered First AI Winter (1969–1986): funding cuts, loss of interest
 
-when z ~ N(0, 1)
-```
+1974  Paul Werbos          → PhD thesis: derived backpropagation (largely ignored)
+      "Beyond Regression: New Tools for Prediction and Analysis in Behavioral Science"
 
-The fixed-point constraint means that if inputs have mean=0 and variance=1, the SELU output also has mean≈0 and variance≈1 — the normalization is **built into the activation function**.
+1986  Rumelhart, Hinton,   → Popularized backpropagation for MLPs
+      Williams               "Learning Representations by Back-Propagating Errors" (Nature)
+                            Ended First AI Winter
 
-**When to use:** Deep fully-connected networks where Batch Normalization would be awkward (RNNs, small batch sizes). Requires `lecun_normal` weight initialization.
+1989  Cybenko               → Universal Approximation Theorem (sigmoid networks)
+1991  Hornik                → Extended UAT to general non-polynomial activations
 
----
+1998  LeCun et al.          → Convolutional Neural Networks (LeNet-5) — Phase 2
 
-### 4.6 Gaussian Error Linear Unit (GELU)
+2006  Hinton et al.         → Deep Belief Networks: first successful deep architecture
+      Triggered the Deep Learning era
 
-```
-GELU(z) = z · Φ(z)
-
-where Φ(z) is the CDF of the standard normal distribution:
-  Φ(z) = P(X ≤ z),  X ~ N(0,1)
-
-Exact:        GELU(z) = z · ½[1 + erf(z/√2)]
-
-Approximation (used in practice):
-  GELU(z) ≈ 0.5z · [1 + tanh(√(2/π) · (z + 0.044715z³))]
-```
-
-**Intuition:** GELU stochastically gates the input by its probability of being positive under a standard normal. High positive values pass through completely; large negative values are gated to near-zero. Unlike ReLU, the gating is smooth and differentiable.
-
-**Where used:** BERT, GPT-2, GPT-3, most modern Transformer architectures.
-
-**Advantages:**
-- Smooth, non-monotonic (has a slight dip for small negative values)
-- Strong empirical performance on NLP benchmarks
-- Avoids the sharp kink at z = 0 that can cause optimization instability
-
----
-
-### 4.7 SiLU / Swish
-
-```
-SiLU(z) = z · σ(z) = z / (1 + e⁻ᶻ)
-
-SiLU'(z) = σ(z) + z · σ(z)(1 − σ(z))
-          = σ(z)(1 + z(1 − σ(z)))
-```
-
-**Range:** Approximately (−0.28, ∞)
-
-**Proposed by:** Google Brain (Ramachandran et al., 2017)
-
-**Properties:**
-- Non-monotonic: has a minimum around z ≈ −1.28
-- Self-gated: multiplies input by its own sigmoid
-- Smooth everywhere (unlike ReLU's kink)
-- SiLU and Swish are the same function with β=1
-- Used in EfficientNet, MobileNetV3
-
----
-
-### 4.8 Mish
-
-```
-Mish(z) = z · tanh(softplus(z))
-         = z · tanh(ln(1 + eᶻ))
-
-Mish'(z) = tanh(sp) + z · sech²(sp) · σ(z)
-           where sp = softplus(z)
-```
-
-**Range:** Approximately (−0.31, ∞)
-
-**Properties:**
-- Smooth, non-monotonic, unbounded above
-- Self-regularizing (bounded below by ~−0.31)
-- Slightly outperforms Swish on some vision tasks (YOLOv4)
-
----
-
-## 5. Output Layer Activations
-
-The output layer activation depends on the **task type**, not the architecture:
-
-### 5.1 Binary Classification — Sigmoid
-
-```
-ŷ = σ(z) ∈ (0, 1)    → interpreted as P(class=1 | x)
-
-Loss: Binary Cross-Entropy
-  L = −[y log ŷ + (1−y) log(1−ŷ)]
-```
-
-Decision: predict class 1 if ŷ ≥ 0.5
-
-### 5.2 Multi-class Classification — Softmax
-
-```
-           e^{zₖ}
-ŷₖ  =  ──────────────     k = 1, 2, ..., K
-          Σⱼ e^{zⱼ}
-
-Properties:
-  ŷₖ ∈ (0, 1)    for all k
-  Σₖ ŷₖ = 1       (valid probability distribution)
-```
-
-**Numerically stable implementation:**
-```
-Naïve: exp(1000) = inf  →  inf/inf = NaN  (BROKEN)
-
-Stable trick:
-  z_shifted = z − max(z)         ← no change in value since max cancels
-  ŷₖ = e^{z_shifted,k} / Σⱼ e^{z_shifted,j}
-
-Why correct:
-  e^{zₖ − max(z)} / Σⱼ e^{zⱼ − max(z)}
-= (e^{−max(z)} · e^{zₖ}) / (e^{−max(z)} · Σⱼ e^{zⱼ})
-= e^{zₖ} / Σⱼ e^{zⱼ}    ✓  (unchanged)
-```
-
-**Loss:** Categorical Cross-Entropy
-```
-L = −Σₖ yₖ log ŷₖ
-```
-Note: **Never** apply `nn.Softmax()` and then `nn.NLLLoss()`. Use `nn.CrossEntropyLoss()` directly, which combines `LogSoftmax + NLLLoss` in a numerically stable way.
-
-### 5.3 Regression — Identity (No Activation)
-
-```
-ŷ = z ∈ (−∞, ∞)
-
-Loss: Mean Squared Error (MSE) or Mean Absolute Error (MAE)
-  L = (1/N) Σᵢ (yᵢ − ŷᵢ)²
-```
-
-No activation needed — we want unbounded real output.
-
----
-
-## 6. The Vanishing Gradient Problem
-
-### Mathematical Derivation
-
-For an L-layer network, the gradient at the first layer (via chain rule) is:
-
-```
-∂L       ∂L      ∂aᴸ   ∂aᴸ⁻¹         ∂a¹
-──── = ───── · ─────── · ──────── · ··· ────────
-∂W¹     ∂aᴸ    ∂aᴸ⁻¹    ∂aᴸ⁻²         ∂W¹
-
-     = ∂L/∂aᴸ · ∏ₗ₌₂ᴸ f'(zˡ) · Wˡ · f'(z¹) · a⁰
-```
-
-For sigmoid, f'(z) ≤ 0.25 for all z. Therefore:
-
-```
-‖∂L/∂W¹‖ ≤ ‖∂L/∂aᴸ‖ · (0.25)^L · ∏ₗ ‖Wˡ‖
-
-For L = 10:  (0.25)^10 ≈ 9.5 × 10⁻⁷
-For L = 20:  (0.25)^20 ≈ 9.1 × 10⁻¹³
-```
-
-Early layers essentially stop learning. This was the core obstacle to deep learning before ReLU.
-
-### Why ReLU Resists Vanishing Gradients
-
-```
-ReLU'(z) ∈ {0, 1}
-
-For active neurons (z > 0):  ReLU'(z) = 1
-Product of 1s across L layers = 1 (no decay!)
-
-∂L/∂W¹ = ∂L/∂aᴸ · (1)^L_active · upstream_terms
-        = ∂L/∂aᴸ · upstream_terms (for active path)
-```
-
-The gradient can flow unchanged through ReLU neurons, enabling training of networks with 100+ layers.
-
-### Exploding Gradients
-
-The opposite problem occurs when weights are large:
-
-```
-If ‖Wˡ‖ > 1 and f'(zˡ) > 1:
-  ‖∂L/∂W¹‖ → ∞ as L increases
-
-Solutions:
-  1. Gradient clipping: clip ‖∂L/∂θ‖ ≤ threshold (standard in RNNs)
-  2. Careful initialization (Xavier, He)
-  3. Batch Normalization (Topic 5)
-  4. Residual connections (ResNet — Phase 2)
-```
-
----
-
-## 7. The Dead Neuron Problem
-
-### Definition
-
-A ReLU neuron is **dead** if:
-
-```
-∀ x ∈ training set:   zⁱ = Wⁱ xⁱ + bⁱ ≤ 0
-
-⟹  ReLU(zⁱ) = 0   and   ∂L/∂Wⁱ = 0   for all samples
-
-⟹  Wⁱ never updates  ⟹  neuron stays dead forever
-```
-
-### Causes
-
-```
-1. Large learning rate:
-   W ← W − η · ∂L/∂W  can overshoot, sending W to large negative values
-   → zⁱ = Wⁱx + bⁱ becomes strongly negative for all x
-
-2. Unfavorable initialization:
-   If b is initialized very negatively, z = Wx + b < 0 from the start
-
-3. Large negative weight updates during training
-```
-
-### Diagnosis
-
-```python
-# After training, check fraction of neurons with zero activation for all samples
-activations = []  # shape: (n_samples, n_neurons)
-dead_fraction = (activations == 0).all(axis=0).mean()
-# Healthy: < 5%  |  Concerning: > 20%
-```
-
-### Solutions
-
-| Solution | Mechanism | Trade-off |
-|---|---|---|
-| Leaky ReLU | α ≠ 0 → gradient always exists | Slight accuracy reduction in some tasks |
-| PReLU | Learnable α | Extra parameters |
-| ELU | Smooth negative saturation | Slower computation |
-| Lower learning rate | Prevents drastic weight updates | Slower convergence |
-| He initialization | Correct variance for ReLU | Must use right init |
-
----
-
-## 8. Comparative Analysis
-
-```
-                 Vanishing   Dead      Zero-    Smooth   Computation
-Activation       Gradient   Neurons  Centered   (C¹)     Cost
-─────────────────────────────────────────────────────────────────────
-Step             N/A (0)     N/A       No        No      O(1)
-Sigmoid          SEVERE      No        No        Yes     O(exp)
-Tanh             MODERATE    No        Yes       Yes     O(exp)
-ReLU             None*       SEVERE    No        No      O(1)
-Leaky ReLU       None*       None      No        No      O(1)
-ELU              None*       None      ~Yes      Yes     O(exp,neg)
-SELU             None*       None      ~Yes      Yes     O(exp,neg)
-GELU             None*       None      ~Yes      Yes     O(erf/tanh)
-SiLU/Swish       None*       None      ~Yes      Yes     O(exp)
-Mish             None*       None      ~Yes      Yes     O(exp)
-
-*No vanishing for active/positive neurons; saturation may still occur for
- very deep networks with all ReLU-family functions, but is far less severe.
-```
-
-### Output Range Comparison
-
-```
-z:       -4   -3   -2   -1    0    1    2    3    4
-
-Step:     0    0    0    0    1    1    1    1    1
-Sigmoid: .02  .05  .12  .27  .50  .73  .88  .95  .98
-Tanh:    -.99 -.99 -.96 -.76  0   .76  .96  .99  .99
-ReLU:     0    0    0    0    0    1    2    3    4
-GELU:    ~0   ~0  -.05 -.16   0   .84  2.0  3.0  4.0
-Swish:   -.07 -.14 -.24 -.27  0   .73  1.76 2.86 3.93
+2012  Krizhevsky et al.     → AlexNet wins ImageNet by massive margin — GPU era begins
 ```
 
 ---
 
-## 9. Practical Selection Guide
-
-### Hidden Layers
-
-```
-Default choice:  ReLU
-  → Fast, simple, works well for most tasks
-
-If dead neurons are a problem:  Leaky ReLU or ELU
-  → Small α (0.01-0.1) is usually sufficient
-
-If training transformers / NLP:  GELU
-  → Standard in BERT, GPT, T5, Llama
-
-If training EfficientNet / modern CNN:  SiLU/Swish
-  → Slightly better than ReLU on image classification
-
-If no batch normalization:  SELU
-  → Self-normalizing; requires lecun_normal init and AlphaDropout
-
-Avoid for hidden layers:  Sigmoid, Tanh
-  → Reserve for output layers or gating mechanisms (LSTM gates)
-```
-
-### Output Layer
-
-```
-Binary classification:      Sigmoid    → ŷ ∈ (0,1)
-Multi-class classification:  Softmax   → probability vector
-Regression:                 None/Identity → ŷ ∈ ℝ
-Multi-label classification:  Sigmoid   → independent probabilities per class
-```
-
-### Architecture-Specific Defaults
-
-| Architecture | Hidden | Output |
-|---|---|---|
-| MLP (tabular data) | ReLU or GELU | task-dependent |
-| CNN | ReLU | task-dependent |
-| ResNet | ReLU | Softmax |
-| Transformer | GELU | Softmax/None |
-| LSTM/GRU | Tanh + Sigmoid (gates) | task-dependent |
-| GAN generator | ReLU / Tanh | Tanh (images) |
-| GAN discriminator | Leaky ReLU | Sigmoid |
-
----
-
-## Key Equations Summary
-
-| Function | Formula | Derivative |
-|---|---|---|
-| Sigmoid | σ(z) = 1/(1+e⁻ᶻ) | σ(z)(1−σ(z)), max=0.25 |
-| Tanh | (eᶻ−e⁻ᶻ)/(eᶻ+e⁻ᶻ) | 1−tanh²(z), max=1 |
-| ReLU | max(0,z) | H(z) ∈ {0,1} |
-| Leaky ReLU | max(αz,z) | α or 1 |
-| ELU | z or α(eᶻ−1) | 1 or ELU+α |
-| SELU | λ·ELU(z,α) | λ or λαeᶻ |
-| GELU | z·Φ(z) | Φ(z)+z·φ(z) |
-| SiLU | z·σ(z) | σ(z)(1+z(1−σ(z))) |
-| Softmax | eᶻᵢ/Σeᶻⱼ | sᵢ(1−sᵢ) diag |
-
----
-
-*Previous: [Topic 1 — Perceptron & MLP](../01-perceptron-and-mlp/theory.md)*
-*Next: [Topic 3 — Gradient Descent & Backpropagation](../03-gradient-descent-and-backprop/theory.md)*
+*Next: [Topic 2 — Activation Functions](../02-activation-functions/theory.md)*  
+*Related: [Topic 3 — Backpropagation](../03-gradient-descent-and-backprop/theory.md)*
