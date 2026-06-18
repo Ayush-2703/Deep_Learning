@@ -222,7 +222,7 @@ T ≤ (R / γ)²
 ### The XOR Truth Table
 
 ```
-  x₁  │  x₂  │  XOR Output
+  x₁   │  x₂   │  XOR Output
 ───────┼───────┼────────────
    0   │   0   │     0
    0   │   1   │     1        ← class 1
