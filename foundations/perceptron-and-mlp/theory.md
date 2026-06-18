@@ -41,7 +41,7 @@ A biological neuron has four major components:
 
 ### The Abstraction Map
 
-| Biological Component    | Artificial Equivalent                           | Mathematical Symbol |
+| Biological Component    | Artificial Equivalent                          | Mathematical Symbol |
 |-------------------------|------------------------------------------------|---------------------|
 | Dendrites               | Input features                                  | x₁, x₂, ..., xₙ    |
 | Synaptic strength       | Learnable connection weights                    | w₁, w₂, ..., wₙ    |
