@@ -538,16 +538,16 @@ L = -1/N Σᵢ₌₁ᴺ [ yᵢ log(ŷᵢ) + (1-yᵢ) log(1-ŷᵢ) ]
 
 ## 8. Key Mathematical Summary
 
-| Concept                   | Formula                                             |
-|---------------------------|-----------------------------------------------------|
+| Concept                   | Formula                                            |
+|---------------------------|----------------------------------------------------|
 | Perceptron pre-activation | z = wᵀx + b                                        |
 | Perceptron output         | ŷ = H(z) ∈ {0, 1}                                  |
-| Perceptron update rule    | w ← w + η(y - ŷ)x,  b ← b + η(y - ŷ)             |
-| MLP layer (forward)       | aˡ = f(Wˡ aˡ⁻¹ + bˡ)                              |
-| MLP batch (forward)       | Aˡ = f(A^(l-1) (Wˡ)ᵀ + bˡ)                        |
+| Perceptron update rule    | w ← w + η(y - ŷ)x,  b ← b + η(y - ŷ)               |
+| MLP layer (forward)       | aˡ = f(Wˡ aˡ⁻¹ + bˡ)                               |
+| MLP batch (forward)       | Aˡ = f(A^(l-1) (Wˡ)ᵀ + bˡ)                         |
 | Binary Cross-Entropy      | L = -[y log ŷ + (1-y) log(1-ŷ)]                    |
-| Total parameters          | P = Σₗ nˡ(nˡ⁻¹ + 1)                               |
-| UAT guarantee             | ∃F: sup\|F(x)-f(x)\| < ε with sufficient K        |
+| Total parameters          | P = Σₗ nˡ(nˡ⁻¹ + 1)                                 |
+| UAT guarantee             | ∃F: sup\|F(x)-f(x)\| < ε with sufficient K         |
 | Convergence bound         | T ≤ (R/γ)²                                         |
 
 ---
@@ -590,5 +590,3 @@ L = -1/N Σᵢ₌₁ᴺ [ yᵢ log(ŷᵢ) + (1-yᵢ) log(1-ŷᵢ) ]
 
 ---
 
-*Next: [Topic 2 — Activation Functions](../02-activation-functions/theory.md)*  
-*Related: [Topic 3 — Backpropagation](../03-gradient-descent-and-backprop/theory.md)*
