@@ -101,7 +101,7 @@ Frank Rosenblatt at Cornell solved the MP neuron's fundamental flaw by introduci
          x₁ ──(w₁)──┐
          x₂ ──(w₂)──┤
          x₃ ──(w₃)──┼──► [ Σ wᵢxᵢ + b ] ──► [ step(z) ] ──► ŷ ∈ {0, 1}
-            ⋮        │
+            ⋮       │
          xₙ ──(wₙ)──┘
                      ▲
                    bias b
