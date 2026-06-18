@@ -43,7 +43,7 @@ A biological neuron has four major components:
 
 | Biological Component    | Artificial Equivalent                           | Mathematical Symbol |
 |-------------------------|------------------------------------------------|---------------------|
-| Dendrites               | Input features                                  | x₁, x₂, ..., xₙ   |
+| Dendrites               | Input features                                  | x₁, x₂, ..., xₙ    |
 | Synaptic strength       | Learnable connection weights                    | w₁, w₂, ..., wₙ    |
 | Cell body (soma)        | Weighted sum: aggregation                       | z = Σ wᵢxᵢ + b     |
 | Axon hillock (threshold)| Activation function (non-linearity)             | f(z)               |
