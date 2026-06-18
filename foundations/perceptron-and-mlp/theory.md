@@ -30,7 +30,7 @@ A biological neuron has four major components:
                     ┌──────────────────────────────────────────────────┐
                     │           BIOLOGICAL NEURON                      │
                     │                                                  │
-  Incoming signals  │  Dendrites   Soma (body)   Axon hillock   Axon  │
+  Incoming signals  │  Dendrites   Soma (body)   Axon hillock   Axon   │
   from other        │     │             │               │          │   │
   neurons ─────────►│  [receive]  [integrate]     [threshold]  [send] │
                     │             sum of          fires if      spike  │
