@@ -1,6 +1,6 @@
 # Theory: Perceptron & Multilayer Perceptron (MLP)
 
-**Topic Deep Learning Mastery Repository**
+**Topic: Deep Learning Mastery Repository**
 
 ---
 
