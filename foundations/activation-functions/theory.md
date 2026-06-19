@@ -1,6 +1,6 @@
 # Theory: Activation Functions
 
-**Phase 1 — Topic 2 | Deep Learning Mastery Repository**
+**Deep Learning Mastery Repository**
 
 ---
 
