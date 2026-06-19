@@ -692,4 +692,3 @@ through the background color. Fully opaque would obscure the scatter plot.
 
 ---
 
-*Next: [Topic 2 — Activation Functions](../02-activation-functions/explanation.md)*
