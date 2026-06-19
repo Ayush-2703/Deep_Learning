@@ -617,5 +617,3 @@ Multi-label classification:  Sigmoid   → independent probabilities per class
 
 ---
 
-*Previous: [Topic 1 — Perceptron & MLP](../01-perceptron-and-mlp/theory.md)*
-*Next: [Topic 3 — Gradient Descent & Backpropagation](../03-gradient-descent-and-backprop/theory.md)*
