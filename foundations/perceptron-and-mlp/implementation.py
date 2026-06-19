@@ -1,5 +1,5 @@
 """
-Phase 1 — Topic 1: Perceptron & Multilayer Perceptron (MLP)
+Topic: Perceptron & Multilayer Perceptron (MLP)
 ============================================================
 Repository : deep-learning-mastery/phase-1-foundations/01-perceptron-and-mlp/
 File       : implementation.py
