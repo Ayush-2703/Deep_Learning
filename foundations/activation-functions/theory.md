@@ -616,4 +616,3 @@ Multi-label classification:  Sigmoid   → independent probabilities per class
 | Softmax | eᶻᵢ/Σeᶻⱼ | sᵢ(1−sᵢ) diag |
 
 ---
-
