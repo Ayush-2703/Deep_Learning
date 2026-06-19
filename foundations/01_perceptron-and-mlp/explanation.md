@@ -1,6 +1,6 @@
 # Code Explanation: Perceptron & Multilayer Perceptron (MLP)
 
-**Phase 1 — Topic 1 | `implementation.py` walkthrough**
+**`implementation.py` walkthrough**
 
 This document explains every design decision in the code — why each function was chosen,
 what each tensor shape means, and the mathematical reasoning behind each operation.
