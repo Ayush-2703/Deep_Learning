@@ -279,7 +279,7 @@ An MLP stacks multiple layers of neurons, where each layer performs a linear tra
                  LAYER 0        LAYER 1         LAYER 2       LAYER 3
                  (Input)    (Hidden Layer 1) (Hidden Layer 2) (Output)
                  n⁰ = 3       n¹ = 4           n² = 4         n³ = 1
-                   │              │                │              │
+                   │             │                │               │
          x₁ ──────►●             ●                ●               │
                    │            ● ●              ● ●              │
          x₂ ──────►● ──────── ●   ● ─────────  ●   ● ────────► ● ──► ŷ
