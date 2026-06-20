@@ -1,6 +1,6 @@
 # Code Explanation: Activation Functions
 
-**Phase 1 — Topic 2 | `implementation.py` walkthrough**
+**Topic `implementation.py` walkthrough**
 
 Every non-obvious line is explained below — the *why* behind numerical tricks,
 design choices, tensor operations, and experiment setup.
