@@ -657,5 +657,4 @@ Adam-trained models in production.
 
 ---
 
-*Previous: [Topic 1 — Perceptron & MLP](../01-perceptron-and-mlp/explanation.md)*
-
+*Previous: 
