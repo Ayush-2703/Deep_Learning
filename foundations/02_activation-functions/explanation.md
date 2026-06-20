@@ -656,5 +656,3 @@ Adam-trained models in production.
 | SELU with wrong init | `_init_model` | `kaiming_normal_` with `fan_in` |
 
 ---
-
-*Previous: 
