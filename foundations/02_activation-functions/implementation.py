@@ -1,5 +1,5 @@
 """
-Phase 1 — Topic 2: Activation Functions
+Topic 2: Activation Functions
 ========================================
 Repository : deep-learning-mastery/phase-1-foundations/02-activation-functions/
 File       : implementation.py
