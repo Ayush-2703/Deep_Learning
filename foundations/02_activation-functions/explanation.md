@@ -658,4 +658,4 @@ Adam-trained models in production.
 ---
 
 *Previous: [Topic 1 — Perceptron & MLP](../01-perceptron-and-mlp/explanation.md)*
-*Next: [Topic 3 — Gradient Descent & Backpropagation](../03-gradient-descent-and-backprop/explanation.md)*
+*Next:
