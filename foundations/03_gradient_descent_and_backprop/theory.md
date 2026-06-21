@@ -1,6 +1,6 @@
 # Theory: Gradient Descent & Backpropagation
 
-**Phase 1 — Topic 3 | Deep Learning Mastery Repository**
+**Deep Learning Mastery Repository**
 
 ---
 
