@@ -598,5 +598,3 @@ Interpretation:
 | Convergence limit | η < 2/λ_max |
 
 ---
-
-*
