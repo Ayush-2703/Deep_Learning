@@ -600,4 +600,4 @@ Interpretation:
 ---
 
 *Previous: [Topic 2 — Activation Functions](../02-activation-functions/theory.md)*
-*Next: [Topic 4 — Loss Functions & Overfitting](../04-loss-functions-and-overfitting/theory.md)*
+*Next:
