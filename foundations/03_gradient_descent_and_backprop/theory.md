@@ -599,5 +599,4 @@ Interpretation:
 
 ---
 
-*Previous: [Topic 2 —
-*Next:
+*
