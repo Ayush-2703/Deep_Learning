@@ -599,5 +599,5 @@ Interpretation:
 
 ---
 
-*Previous: [Topic 2 — Activation Functions](../02-activation-functions/theory.md)*
+*Previous: [Topic 2 —
 *Next:
