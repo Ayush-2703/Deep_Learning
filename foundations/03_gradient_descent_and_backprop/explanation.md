@@ -1,6 +1,6 @@
 # Code Explanation: Gradient Descent & Backpropagation
 
-**Phase 1 — Topic 3 | `implementation.py` walkthrough**
+**`implementation.py` walkthrough**
 
 ---
 
