@@ -1,7 +1,7 @@
 """
-Phase 1 — Topic 3: Gradient Descent & Backpropagation
+Topic: Gradient Descent & Backpropagation
 ======================================================
-Repository : deep-learning-mastery/phase-1-foundations/03-gradient-descent-backprop/
+Repository : deep-learning/foundations/03-gradient-descent-backprop/
 File       : implementation.py
 Framework  : NumPy (manual backprop) + PyTorch (autograd demo) + matplotlib
 Python     : 3.10+
