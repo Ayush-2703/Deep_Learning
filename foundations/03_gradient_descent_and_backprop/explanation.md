@@ -178,3 +178,4 @@ with torch.no_grad():
 | Central differences `(L+−L-)/(2ε)` | O(ε²) vs O(ε) accuracy |
 | Track gradient steps not epochs | Fair comparison of batch sizes |
 | `torch.isfinite()` guard | Prevents NaN from breaking training loop |
+
