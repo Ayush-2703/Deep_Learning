@@ -1,7 +1,7 @@
 """
 Topic: Activation Functions
 ========================================
-Repository : deep-learning-mastery/phase-1-foundations/02-activation-functions/
+Repository : deep-learning/foundations/02-activation-functions/
 File       : implementation.py
 Framework  : PyTorch 2.x | NumPy | scikit-learn | matplotlib
 Python     : 3.10+
