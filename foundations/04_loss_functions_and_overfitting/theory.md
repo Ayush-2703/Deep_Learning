@@ -1,6 +1,6 @@
 # Theory: Loss Functions, Overfitting & Bias-Variance Trade-off
 
-**Phase 1 — Topic 4 | Deep Learning Mastery Repository**
+**Deep Learning Mastery Repository**
 
 ---
 
