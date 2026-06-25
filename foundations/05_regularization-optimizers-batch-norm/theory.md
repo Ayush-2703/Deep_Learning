@@ -1,6 +1,6 @@
 # Theory: Regularization, Optimizers, Batch Normalization & Early Stopping
 
-**Phase 1 — Topic 5 | Deep Learning Mastery Repository**
+**Deep Learning Mastery Repository**
 
 ---
 
