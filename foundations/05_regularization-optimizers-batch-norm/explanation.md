@@ -274,4 +274,3 @@ fraction of the compute (40 vs 300 epochs = 7.5× faster).
 | Adam + L2 conflated with true weight decay | Used `AdamW` for decoupled decay |
 | Tiny floating-point "improvements" resetting patience | `min_delta` threshold in EarlyStopping |
 | BatchNorm masking its own benefit at low LR | Used aggressive `lr=0.1` to expose effect |
-
