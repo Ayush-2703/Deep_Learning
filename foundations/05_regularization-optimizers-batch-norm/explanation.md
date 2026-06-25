@@ -275,5 +275,4 @@ fraction of the compute (40 vs 300 epochs = 7.5× faster).
 | Tiny floating-point "improvements" resetting patience | `min_delta` threshold in EarlyStopping |
 | BatchNorm masking its own benefit at low LR | Used aggressive `lr=0.1` to expose effect |
 
-*Previous: [Topic 4 — Loss Functions & Overfitting](../04-loss-functions-and-overfitting/explanation.md)*
 *Next: [Topic 6 — Hyperparameter Tuning & Augmentation](../06-hyperparameter-tuning-augmentation/explanation.md)*
