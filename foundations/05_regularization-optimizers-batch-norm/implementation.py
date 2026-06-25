@@ -1,7 +1,7 @@
 """
-Phase 1 — Topic 5: Regularization, Optimizers, BatchNorm & Early Stopping
+Topic: Regularization, Optimizers, BatchNorm & Early Stopping
 ==========================================================================
-Repository : deep-learning-mastery/phase-1-foundations/05-regularization-optimizers-batchnorm/
+Repository : deep-learning/foundations/05-regularization-optimizers-batchnorm/
 File       : implementation.py
 
 Sections:
