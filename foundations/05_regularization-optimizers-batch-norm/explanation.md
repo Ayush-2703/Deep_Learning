@@ -1,6 +1,6 @@
 # Code Explanation: Regularization, Optimizers, BatchNorm & Early Stopping
 
-**Phase 1 — Topic 5 | `implementation.py` walkthrough**
+**`implementation.py` walkthrough**
 
 ---
 
