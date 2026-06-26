@@ -1,7 +1,7 @@
 """
-Phase 1 — Topic 6: Hyperparameter Tuning & Data Augmentation
+Topic: Hyperparameter Tuning & Data Augmentation
 ===============================================================
-Repository : deep-learning-mastery/phase-1-foundations/06-hyperparameter-tuning-augmentation/
+Repository : deep-learning/foundations/06-hyperparameter-tuning-augmentation/
 File       : implementation.py
 
 Sections:
