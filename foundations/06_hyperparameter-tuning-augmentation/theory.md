@@ -1,6 +1,6 @@
 # Theory: Hyperparameter Tuning & Data Augmentation
 
-**Phase 1 — Topic 6 | Deep Learning Mastery Repository**
+**Deep Learning Mastery Repository**
 
 ---
 
