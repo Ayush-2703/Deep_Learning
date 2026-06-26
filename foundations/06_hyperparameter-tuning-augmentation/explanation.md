@@ -1,6 +1,6 @@
 # Code Explanation: Hyperparameter Tuning & Data Augmentation
 
-**Phase 1 — Topic 6 | `implementation.py` walkthrough**
+**`implementation.py` walkthrough**
 
 ---
 
@@ -313,5 +313,3 @@ is unstable across different data partitions.
 | Augmentation evaluated where no overfitting exists | Deliberately shrunk train set in Section C |
 | Single train/val split misleads on hyperparameter robustness | 5-Fold CV with mean ± std reporting |
 
-*Previous: [Topic 5 — Regularization & Optimizers](../05-regularization-optimizers-batchnorm/explanation.md)*
-*Next: [Topic 7 — Linear Algebra & PyTorch Tensors](../07-extra-linear-algebra-pytorch-tensors/explanation.md)*
