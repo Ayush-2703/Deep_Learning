@@ -1,7 +1,7 @@
 """
-Phase 1 — Topic 7 (Extra): Linear Algebra, Calculus & PyTorch Tensor Fundamentals
+Topic: Linear Algebra, Calculus & PyTorch Tensor Fundamentals
 ===================================================================================
-Repository : deep-learning-mastery/phase-1-foundations/07-extra-linear-algebra-pytorch-tensors/
+Repository : deep-learning/foundations/07-extra-linear-algebra-pytorch-tensors/
 File       : implementation.py
 
 Sections:
