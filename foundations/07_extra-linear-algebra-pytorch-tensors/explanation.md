@@ -1,6 +1,6 @@
 # Code Explanation: Linear Algebra & PyTorch Tensor Fundamentals
 
-**Phase 1 — Topic 7 (Extra) | `implementation.py` walkthrough**
+**`implementation.py` walkthrough**
 
 ---
 
@@ -360,12 +360,9 @@ building a computation graph for a forward pass where we will never call
 
 ---
 
-*Previous: [Topic 6 — Hyperparameter Tuning & Augmentation](../06-hyperparameter-tuning-augmentation/explanation.md)*
 
 **Phase 1 — Deep Learning Foundations is now complete.** All 7 topics (Perceptron/MLP,
 Activation Functions, Gradient Descent/Backprop, Loss Functions/Overfitting,
 Regularization/Optimizers/BatchNorm, Hyperparameter Tuning/Augmentation, and
 Linear Algebra/PyTorch Fundamentals) have full theory, working implementation,
 and line-by-line explanation files.
-
-*Next: Phase 2 — Convolutional Neural Networks & Computer Vision*
