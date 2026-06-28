@@ -1,7 +1,7 @@
 """
-Phase 2 — Topic 1: Convolutions, Kernels, Pooling & Receptive Fields
+Topic: Convolutions, Kernels, Pooling & Receptive Fields
 =======================================================================
-Repository : deep-learning-mastery/phase-2-cnns/01-convolution-basics/
+Repository : deep-learning/cnns/01-convolution-basics/
 File       : implementation.py
 
 Sections:
