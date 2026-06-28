@@ -1,6 +1,6 @@
 # Theory: Convolutions, Kernels, Pooling & Receptive Fields
 
-**Phase 2 — Topic 1 | Deep Learning Mastery Repository**
+**Deep Learning Mastery Repository**
 
 ---
 
