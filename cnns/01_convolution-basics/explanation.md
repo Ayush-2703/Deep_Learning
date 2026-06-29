@@ -372,6 +372,3 @@ are the foundation of image-processing neural networks.
 | No real image datasets available (no internet access) | Procedurally generated synthetic test image with known edges |
 
 ---
-
-*Next: [Topic 2 — CNN Architectures: LeNet to DenseNet](../02-architectures-lenet-to-densenet/explanation.md)*
-
