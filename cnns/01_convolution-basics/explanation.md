@@ -1,6 +1,6 @@
 # Code Explanation: Convolutions, Kernels, Pooling & Receptive Fields
 
-**Phase 2 — Topic 1 | `implementation.py` walkthrough**
+**`implementation.py` walkthrough**
 
 ---
 
