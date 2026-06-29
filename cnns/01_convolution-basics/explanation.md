@@ -8,7 +8,7 @@
 
 ### Why Triple-Nested Loops, Not Vectorized NumPy
 
-```python
+```python 
 for i in range(H_out):
     for j in range(W_out):
         hi, wj = i * stride, j * stride
