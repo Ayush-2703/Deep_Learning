@@ -246,17 +246,17 @@ each stage, rather than the architect having to guess.
                          Input
                            │
         ┌──────────┬───────┴───────┬──────────┐
-        │           │               │          │
-     1×1 conv    1×1 conv        1×1 conv    MaxPool 3×3
-        │           │               │          │
-        │        3×3 conv        5×5 conv      │
-        │           │               │       1×1 conv
-        │           │               │          │
+        │          │               │          │
+     1×1 conv   1×1 conv        1×1 conv    MaxPool 3×3
+        │          │               │          │
+        │       3×3 conv        5×5 conv      │
+        │          │               │       1×1 conv
+        │          │               │          │
         └──────────┴───────┬───────┴──────────┘
-                            │
+                           │
                     Concatenate (channel-wise)
-                            │
-                          Output
+                           │
+                        Output
 ```
 
 ### The Role of 1×1 Convolutions ("Bottleneck")
