@@ -315,15 +315,15 @@ extra layers).
         x
         │
         ├─────────────────────┐
-        │                       │ (identity skip connection)
-        ▼                       │
-     Conv(3×3) → BN → ReLU       │
-        │                       │
-        ▼                       │
-     Conv(3×3) → BN              │
-        │                       │
-        ▼                       │
-       (+) ◄─────────────────────┘
+        │                     │ (identity skip connection)
+        ▼                     │
+     Conv(3×3) → BN → ReLU    │
+        │                     │
+        ▼                     │
+     Conv(3×3) → BN           │
+        │                     │
+        ▼                     │
+       (+) ◄──────────────────┘
         │
         ▼
       ReLU
