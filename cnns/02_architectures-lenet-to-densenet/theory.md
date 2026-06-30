@@ -504,7 +504,7 @@ Maximum accuracy-per-parameter:  DenseNet, though at higher training memory cost
 Educational/historical baseline: LeNet (simplicity), VGGNet (uniformity)
 ```
 
----
+--- 
 
 ## Key Equations Summary
 
