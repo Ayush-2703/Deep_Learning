@@ -1,6 +1,6 @@
 # Theory: CNN Architectures — LeNet, AlexNet, VGGNet, ResNet, DenseNet, GoogLeNet
 
-**Phase 2 — Topic 2 | Deep Learning Mastery Repository**
+**Deep Learning Mastery Repository**
 
 ---
 
