@@ -1,6 +1,6 @@
 # Code Explanation: CNN Architectures — LeNet to DenseNet
 
-**Phase 2 — Topic 2 | `implementation.py` walkthrough**
+**`implementation.py` walkthrough**
 
 ---
 
