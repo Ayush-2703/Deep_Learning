@@ -1,5 +1,5 @@
 """
-Phase 2 — Topic 2: CNN Architectures — LeNet, AlexNet, VGGNet, ResNet, DenseNet, GoogLeNet
+Topic: CNN Architectures — LeNet, AlexNet, VGGNet, ResNet, DenseNet, GoogLeNet
 =============================================================================================
 Repository : deep-learning-mastery/phase-2-cnns/02-architectures-lenet-to-densenet/
 File       : implementation.py
