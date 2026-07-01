@@ -1,7 +1,7 @@
 """
 Topic: CNN Architectures — LeNet, AlexNet, VGGNet, ResNet, DenseNet, GoogLeNet
 =============================================================================================
-Repository : deep-learning-mastery/phase-2-cnns/02-architectures-lenet-to-densenet/
+Repository : deep-learning/cnns/02-architectures-lenet-to-densenet/
 File       : implementation.py
 
 All architectures are SCALED DOWN versions of the originals (fewer channels/layers)
