@@ -432,4 +432,3 @@ this.
 ---
 
 *Previous: [Topic 1 — Convolution Basics](../01-convolution-basics/explanation.md)*
-*Next: [Topic 3 — Object Detection: R-CNN & YOLO](../03-object-detection-rcnn-yolo/explanation.md)*
