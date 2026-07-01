@@ -430,5 +430,3 @@ this.
 | Hiding an inconvenient training instability (ResNet spike) | Reported and explained the real result, not cherry-picked |
 
 ---
-
-*Previous: [Topic 1 — Convolution Basics](../01-convolution-basics/explanation.md)*
