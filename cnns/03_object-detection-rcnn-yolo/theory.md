@@ -1,6 +1,6 @@
 # Theory: Object Detection — Region-Based CNNs (Faster R-CNN) & YOLO
 
-**Phase 2 — Topic 3 | Deep Learning Mastery Repository**
+**Deep Learning Mastery Repository**
 
 ---
 
