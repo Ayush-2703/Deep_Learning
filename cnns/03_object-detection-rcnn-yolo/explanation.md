@@ -131,7 +131,7 @@ concrete, traceable example connecting the abstract algorithm description to
 actual executed code.
 
 ---
-
+ 
 ## 3. Section D — YOLO-mini (Fully From Scratch)
 
 ### Why Sigmoid on ALL Outputs (A Deliberate Deviation From YOLOv1)
@@ -421,6 +421,3 @@ time than a single synchronous command execution comfortably allows.
 | Single-invocation execution window shorter than full training time | `setsid` background process + periodic polling |
 
 ---
-
-*Previous: [Topic 2 — CNN Architectures](../02-architectures-lenet-to-densenet/explanation.md)*
-
