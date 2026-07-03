@@ -423,4 +423,4 @@ time than a single synchronous command execution comfortably allows.
 ---
 
 *Previous: [Topic 2 — CNN Architectures](../02-architectures-lenet-to-densenet/explanation.md)*
-*Next: [Topic 4 — Segmentation: U-Net & Mask R-CNN](../04-segmentation-unet-maskrcnn/explanation.md)*
+
