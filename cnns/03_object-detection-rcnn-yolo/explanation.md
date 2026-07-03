@@ -1,6 +1,6 @@
 # Code Explanation: Object Detection — Faster R-CNN & YOLO
 
-**Phase 2 — Topic 3 | `implementation.py` walkthrough**
+**`implementation.py` walkthrough**
 
 ---
 
