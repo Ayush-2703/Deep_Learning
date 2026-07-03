@@ -1,7 +1,7 @@
 """
-Phase 2 — Topic 3: Object Detection — Faster R-CNN & YOLO
+Topic: Object Detection — Faster R-CNN & YOLO
 =============================================================
-Repository : deep-learning-mastery/phase-2-cnns/03-object-detection-rcnn-yolo/
+Repository : deep-learning/cnns/03-object-detection-rcnn-yolo/
 File       : implementation.py
 
 Sections:
