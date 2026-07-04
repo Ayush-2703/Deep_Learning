@@ -421,8 +421,6 @@ You're free to use, fork, and build on this for personal and commercial projects
 
 ### Ayush Kumar Singh
 
-**B.Tech — AI**
-
 *Researcher in Adversarial ML, Geospatial AI, and LLM/NLP Systems*
 
 [![GitHub](https://img.shields.io/badge/GitHub-Ayush--2703-181717?style=for-the-badge&logo=github)](https://github.com/Ayush-2703)
