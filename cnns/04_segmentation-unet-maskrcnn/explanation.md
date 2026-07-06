@@ -1,6 +1,6 @@
 # Code Explanation: Segmentation — U-Net & Mask R-CNN
 
-**Phase 2 — Topic 4 | `implementation.py` walkthrough**
+**`implementation.py` walkthrough**
 
 ---
 
