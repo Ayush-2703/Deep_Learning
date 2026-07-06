@@ -345,6 +345,3 @@ reached near-perfect mIoU in the SAME wall-clock budget U-Net was given).
 | Hiding Mask R-CNN's weaker (reduced-budget) results | Reported and explained P=0.61/R=0.55 honestly, with causal analysis |
 
 ---
-
-*Previous: [Topic 3 — Object Detection](../03-object-detection-rcnn-yolo/explanation.md)*
-
