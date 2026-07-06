@@ -1,7 +1,7 @@
 """
 Phase 2 — Topic 4: Segmentation — U-Net & Mask R-CNN
 ========================================================
-Repository : deep-learning-mastery/phase-2-cnns/04-segmentation-unet-maskrcnn/
+Repository : deep-learning/cnns/04-segmentation-unet-maskrcnn/
 File       : implementation.py
 
 Sections:
