@@ -137,12 +137,12 @@ Both U-Net and ResNet (Topic 2) use "skip connections," but they serve
 FUNDAMENTALLY DIFFERENT purposes and use DIFFERENT combination operations:
 
 ```
-                  ResNet                           U-Net
-─────────────────────────────────────────────────────────────────────
-Combination:      ADDITION (y = F(x) + x)          CONCATENATION (channel-wise)
-Purpose:           Ease optimization of VERY        Recover FINE-GRAINED spatial
-                   DEEP networks (gradient flow)     detail LOST during downsampling
-Shapes involved:   SAME shape (x and F(x) match)     DIFFERENT origin, matched via
+                       ResNet                           U-Net
+───────────────────────────────────────────────────────────────────────────────────────────
+Combination:      ADDITION (y = F(x) + x)             CONCATENATION (channel-wise)
+Purpose:           Ease optimization of VERY          Recover FINE-GRAINED spatial
+                   DEEP networks (gradient flow)       detail LOST during downsampling
+Shapes involved:   SAME shape (x and F(x) match)      DIFFERENT origin, matched via
                                                        cropping/padding to align spatially
 Spans:             Within a single residual BLOCK     Across the ENTIRE encoder→decoder,
                    (local, short-range)                at EACH resolution level (long-range)
