@@ -18,15 +18,15 @@
 ## 1. Segmentation Task Taxonomy
 
 ```
-Classification:          "What is in this image?"          → 1 label/image
-Object Detection:        "What and WHERE (box)?"            → N boxes+labels/image
-Semantic Segmentation:    "What class is EVERY PIXEL?"       → 1 class-map/image
+Classification:          "What is in this image?"               → 1 label/image
+Object Detection:        "What and WHERE (box)?"                → N boxes+labels/image
+Semantic Segmentation:   "What class is EVERY PIXEL?"           → 1 class-map/image
                           (does NOT distinguish between two
                            instances of the same class —
                            "all pixels belonging to ANY car"
                            get the same single "car" label)
 Instance Segmentation:    "What class AND which INSTANCE is
-                           every pixel?"                      → N masks+labels/image
+                           every pixel?"                         → N masks+labels/image
                           (distinguishes "car #1" from "car #2"
                            — each gets its own separate mask)
 Panoptic Segmentation:    Combines semantic (for background/
@@ -40,10 +40,10 @@ Panoptic Segmentation:    Combines semantic (for background/
 ```
 Original Image:        🚗 🚗  (two cars)
 
-Semantic Segmentation:  [car][car]   ← both cars get the SAME "car" mask region,
-                                        merged into one connected blob if touching
+Semantic Segmentation:  [car][car]      ← both cars get the SAME "car" mask region,
+                                          merged into one connected blob if touching
 
-Instance Segmentation:  [car#1][car#2] ← each car gets its OWN distinct mask,
+Instance Segmentation:  [car#1][car#2]  ← each car gets its OWN distinct mask,
                                           even if they're touching/overlapping
 ```
 
