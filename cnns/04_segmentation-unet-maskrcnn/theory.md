@@ -1,6 +1,6 @@
 # Theory: Segmentation — U-Net & Mask R-CNN
 
-**Phase 2 — Topic 4 | Deep Learning Mastery Repository**
+**Deep Learning Mastery Repository**
 
 ---
 
