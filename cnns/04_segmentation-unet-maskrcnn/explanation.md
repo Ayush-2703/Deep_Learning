@@ -347,4 +347,4 @@ reached near-perfect mIoU in the SAME wall-clock budget U-Net was given).
 ---
 
 *Previous: [Topic 3 — Object Detection](../03-object-detection-rcnn-yolo/explanation.md)*
-*Next: [Topic 5 — Transfer Learning & Fine-tuning](../05-transfer-learning-finetuning/explanation.md)*
+
