@@ -116,12 +116,12 @@ during training).
 ### 3.2 Full Fine-tuning (All Layers Trainable)
 
 ```
-┌─────────────────────────┐     ┌──────────────────┐
-│  Pretrained Backbone      │ ──► │  NEW Classifier   │
-│  (UNFROZEN — all layers   │     │  Head (trainable) │
-│   receive gradients,       │     │                  │
-│   typically at LOW LR)      │     │                  │
-└─────────────────────────┘     └──────────────────┘
+┌──────────────────────────┐     ┌───────────────────┐
+│  Pretrained Backbone     │ ──► │  NEW Classifier   │
+│  (UNFROZEN — all layers  │     │  Head (trainable) │
+│   receive gradients,     │     │                   │
+│   typically at LOW LR)   │     │                   │
+└──────────────────────────┘     └───────────────────┘
 
 EVERY parameter in the network can adapt to the target task.
 ```
