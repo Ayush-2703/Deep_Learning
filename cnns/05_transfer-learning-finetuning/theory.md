@@ -1,6 +1,6 @@
 # Theory: Transfer Learning & Fine-tuning
 
-**Phase 2 — Topic 5 | Deep Learning Mastery Repository**
+**Deep Learning Mastery Repository**
 
 ---
 
@@ -98,11 +98,11 @@ task-specific layers adapt to the new problem.
 ### 3.1 Feature Extraction (Frozen Backbone)
 
 ```
-┌─────────────────────────┐     ┌──────────────────┐
-│  Pretrained Backbone      │ ──► │  NEW Classifier   │
-│  (FROZEN — no gradient    │     │  Head (trainable) │
-│   updates at all)          │     │                  │
-└─────────────────────────┘     └──────────────────┘
+┌──────────────────────────┐     ┌───────────────────┐
+│  Pretrained Backbone     │ ──► │  NEW Classifier   │
+│  (FROZEN — no gradient   │     │  Head (trainable) │
+│   updates at all)        │     │                   │
+└──────────────────────────┘     └───────────────────┘
 
 Only the new head's parameters receive gradient updates.
 The backbone acts as a FIXED feature extractor.
