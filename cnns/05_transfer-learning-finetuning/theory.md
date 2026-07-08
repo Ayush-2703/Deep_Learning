@@ -134,11 +134,11 @@ the entire network.
 ### 3.3 Partial Fine-tuning (Freeze Early, Unfreeze Late)
 
 ```
-┌──────────────┐  ┌──────────────┐     ┌──────────────────┐
-│  Early Layers  │  │  Late Layers   │ ──► │  NEW Classifier   │
-│  (FROZEN)      │  │  (UNFROZEN,     │     │  Head (trainable) │
-│                │  │   low LR)       │     │                  │
-└──────────────┘  └──────────────┘     └──────────────────┘
+┌───────────────┐  ┌───────────────┐     ┌───────────────────┐
+│  Early Layers │  │  Late Layers  │ ──► │  NEW Classifier   │
+│  (FROZEN)     │  │  (UNFROZEN,   │     │  Head (trainable) │
+│               │  │   low LR)     │     │                   │
+└───────────────┘  └───────────────┘     └───────────────────┘
 ```
 
 A middle-ground compromise: freeze the most generic (early) layers entirely,
