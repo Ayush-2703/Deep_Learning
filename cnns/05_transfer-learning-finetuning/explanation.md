@@ -1,6 +1,6 @@
 # Code Explanation: Transfer Learning & Fine-tuning
 
-**Phase 2 — Topic 5 | `implementation.py` walkthrough**
+**`implementation.py` walkthrough**
 
 ---
 
@@ -370,5 +370,4 @@ Segmentation, and Transfer Learning) have full theory, working implementation,
 and line-by-line explanation files — every implementation executed end-to-end
 with real, honestly-reported results.
 
-*Next: Phase 3 — Sequential Modeling (RNNs, LSTMs, GRUs, Seq2Seq, State Space Models)*
 
