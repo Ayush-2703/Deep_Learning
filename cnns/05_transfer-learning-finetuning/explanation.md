@@ -363,11 +363,3 @@ particular run needed no further intervention.
 ---
 
 *Previous: [Topic 4 — Segmentation: U-Net & Mask R-CNN](../04-segmentation-unet-maskrcnn/explanation.md)*
-
-**Phase 2 — Convolutional Neural Networks & Computer Vision is now complete.**
-All 5 topics (Convolution Basics, CNN Architectures, Object Detection,
-Segmentation, and Transfer Learning) have full theory, working implementation,
-and line-by-line explanation files — every implementation executed end-to-end
-with real, honestly-reported results.
-
-
