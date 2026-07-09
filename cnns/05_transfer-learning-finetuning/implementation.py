@@ -1,7 +1,7 @@
 """
-Phase 2 — Topic 5: Transfer Learning & Fine-tuning
+Topic: Transfer Learning & Fine-tuning
 ======================================================
-Repository : deep-learning-mastery/phase-2-cnns/05-transfer-learning-finetuning/
+Repository : deep-learning/cnns/05-transfer-learning-finetuning/
 File       : implementation.py
 
 Since this environment has no internet access to download real pretrained
