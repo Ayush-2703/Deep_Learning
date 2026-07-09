@@ -361,5 +361,3 @@ particular run needed no further intervention.
 | Misdiagnosing a transient `ps` check gap as a real process crash | Re-verified with a follow-up check before concluding failure |
 
 ---
-
-*Previous: [Topic 4 — Segmentation: U-Net & Mask R-CNN](../04-segmentation-unet-maskrcnn/explanation.md)*
