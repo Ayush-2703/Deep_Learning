@@ -1,6 +1,6 @@
 # Theory: Recurrent Neural Networks (RNNs)
 
-**Phase 3 — Topic 1 | Deep Learning Mastery Repository**
+**Deep Learning Mastery Repository**
 
 ---
 
