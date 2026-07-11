@@ -1,6 +1,6 @@
 # Code Explanation: Recurrent Neural Networks (RNNs)
 
-**Phase 3 — Topic 1 | `implementation.py` walkthrough**
+**`implementation.py` walkthrough**
 
 ---
 
@@ -157,5 +157,3 @@ the un-squeezed shape) is caught immediately by Python's `IndexError`, not silen
 | Signal value range trivially distinguishable from noise | Rescale to `{-1,+1}` |
 | Smoothing a bimodal accuracy pattern into a fake monotonic curve | Report exact result with causal explanation |
 | 3D indexing on a 2D squeezed tensor | `unsqueeze(-1)` before `torch.cat` |
-
-*Next: [Topic 2 — LSTM & GRU](../02-lstm-and-gru/explanation.md)*
