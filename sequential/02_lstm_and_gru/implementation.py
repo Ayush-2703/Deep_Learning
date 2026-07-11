@@ -1,7 +1,7 @@
 """
-Phase 3 — Topic 2: LSTM & GRU — Gated Recurrent Architectures
+Topic: LSTM & GRU — Gated Recurrent Architectures
 =================================================================
-Repository : deep-learning-mastery/phase-3-sequential/02-lstm-and-gru/
+Repository : deep-learning/sequential/02-lstm-and-gru/
 File       : implementation.py
 
 Sections:
