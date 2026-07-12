@@ -1,6 +1,6 @@
 # Theory: Seq2Seq, Attention & Teacher Forcing
 
-**Phase 3 — Topic 3 | Deep Learning Mastery Repository**
+**Deep Learning Mastery Repository**
 
 ---
 
