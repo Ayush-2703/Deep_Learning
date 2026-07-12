@@ -166,5 +166,3 @@ without an explicit "what to remember" signal in the input.
 | Dismissing GRU beating LSTM as impossible | Explained via gradient-path simplicity argument |
 
 ---
-
-*Previous: [Topic 1 — RNNs](../01-rnns/explanation.md)*
