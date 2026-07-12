@@ -1,6 +1,6 @@
 # Code Explanation: LSTM & GRU — Gated Recurrent Architectures
 
-**Phase 3 — Topic 2 | `implementation.py` walkthrough**
+**`implementation.py` walkthrough**
 
 ---
 
