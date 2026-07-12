@@ -168,4 +168,3 @@ without an explicit "what to remember" signal in the input.
 ---
 
 *Previous: [Topic 1 — RNNs](../01-rnns/explanation.md)*
-*Next: [Topic 3 — Seq2Seq NLP](../03-seq2seq-nlp/explanation.md)*
