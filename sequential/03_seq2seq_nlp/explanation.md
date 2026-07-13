@@ -1,6 +1,6 @@
 # Code Explanation: Seq2Seq, Attention & Teacher Forcing
 
-**Phase 3 — Topic 3 | `implementation.py` walkthrough**
+**`implementation.py` walkthrough**
 
 ---
 
