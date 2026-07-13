@@ -226,4 +226,3 @@ harder task where the model retains genuine step-by-step uncertainty.
 ---
 
 *Previous: [Topic 2 — LSTM & GRU](../02-lstm-and-gru/explanation.md)*
-*Next: [Topic 4 — State Space Models (Mamba)](../04-extra-state-space-models-mamba/explanation.md)*
