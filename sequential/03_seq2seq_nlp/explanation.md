@@ -224,5 +224,3 @@ harder task where the model retains genuine step-by-step uncertainty.
 | `math.log(0)` crashing BLEU computation on zero-precision n-grams | `max(prec, 1e-10)` floor before `log` |
 
 ---
-
-*Previous: [Topic 2 — LSTM & GRU](../02-lstm-and-gru/explanation.md)*
