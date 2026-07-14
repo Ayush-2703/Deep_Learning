@@ -267,7 +267,7 @@ Mamba's key innovation: make `Δ, B, C` FUNCTIONS OF THE INPUT at each time
 step (while keeping `A` fixed, for computational reasons):
 
 ```
-Δₜ = softplus(Linear_Δ(uₜ))        input-dependent step size
+Δₜ = softplus(Linear_Δ(uₜ))          input-dependent step size
 Bₜ = Linear_B(uₜ)                    input-dependent input matrix
 Cₜ = Linear_C(uₜ)                    input-dependent output matrix
 
@@ -346,16 +346,16 @@ scope.
 ## 10. Comparing RNN, Transformer, and SSM
 
 ```
-                     RNN/LSTM/GRU   Transformer      S4 (LTI SSM)   Mamba (Selective)
-──────────────────────────────────────────────────────────────────────────────────
-Training parallelism  None (sequential) Full (all positions) Full (via FFT conv)  Full (via parallel scan)
-Training complexity    O(L)              O(L²)                O(L log L)           O(L) (scan)
-Inference complexity   O(1)/step         O(L)/step (grows      O(1)/step            O(1)/step
-                       (constant state)   with context!)        (constant state)     (constant state)
-Content-based          Limited (via      YES (native,          NO (fixed A,B,C)     YES (selective
- reasoning              gates)            attention)                                 Δ,B,C)
-Long-range memory       Poor (vanishing   Good (direct           Excellent (HiPPO)    Good (selective
-                        gradients)         attention to any                          + HiPPO-inspired A)
+                       RNN/LSTM/GRU       Transformer            S4 (LTI SSM)            Mamba (Selective)
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+Training parallelism  None (sequential)  Full (all positions)   Full (via FFT conv)    Full (via parallel scan)
+Training complexity    O(L)               O(L²)                 O(L log L)             O(L) (scan)
+Inference complexity   O(1)/step          O(L)/step (grows      O(1)/step              O(1)/step
+                       (constant state)   with context!)        (constant state)      (constant state)
+Content-based          Limited (via       YES (native,          NO (fixed A,B,C)       YES (selective
+ reasoning              gates)            attention)                                  Δ,B,C)
+Long-range memory       Poor (vanishing   Good (direct          Excellent (HiPPO)     Good (selective
+                        gradients)        attention to any                            + HiPPO-inspired A)
                                            position)
 ```
 
