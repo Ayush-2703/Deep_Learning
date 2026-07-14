@@ -1,7 +1,7 @@
 """
 Phase 3 -- Topic 4 (Extra): State Space Models -- S4 & Mamba
 ================================================================
-Repository : deep-learning-mastery/phase-3-sequential/04-extra-state-space-models-mamba/
+Repository : deep-learning/sequential/04-extra-state-space-models-mamba/
 File       : implementation.py
 
 Sections:
