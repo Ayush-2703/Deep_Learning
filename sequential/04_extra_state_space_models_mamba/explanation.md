@@ -1,6 +1,6 @@
 # Code Explanation: State Space Models — S4 & Mamba
 
-**Phase 3 — Topic 4 (Extra) | `implementation.py` walkthrough**
+**`implementation.py` walkthrough**
 
 ---
 
@@ -250,9 +250,6 @@ successfully learns a given task.
 | Presenting the Section F benchmark as an unambiguous SSM win | Reported the genuine near-chance result for all 4 architectures with causal explanation |
 
 ---
-
-*Previous: [Topic 3 — Seq2Seq NLP](../03-seq2seq-nlp/explanation.md)*
-
 **Phase 3 — Sequential Modeling is now complete.** All 4 topics (RNNs,
 LSTM/GRU, Seq2Seq with Attention, and State Space Models) have full theory,
 working implementation, and line-by-line explanation files — every
