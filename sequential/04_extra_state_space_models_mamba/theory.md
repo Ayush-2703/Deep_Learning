@@ -1,6 +1,6 @@
 # Theory: State Space Models — S4 & Mamba
 
-**Phase 3 — Topic 4 (Extra) | Deep Learning Mastery Repository**
+**Deep Learning Mastery Repository**
 
 ---
 
