@@ -1,5 +1,5 @@
 """
-Phase 3 — Topic 3: Seq2Seq, Attention & Teacher Forcing
+Topic: Seq2Seq, Attention & Teacher Forcing
 ==========================================================
 Repository : deep-learning/sequential/03-seq2seq-nlp/
 File       : implementation.py
