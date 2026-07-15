@@ -255,5 +255,3 @@ LSTM/GRU, Seq2Seq with Attention, and State Space Models) have full theory,
 working implementation, and line-by-line explanation files — every
 implementation executed end-to-end with real, honestly-reported results,
 including the surprising, non-monotonic, and occasionally inconclusive ones.
-
-*Next: Phase 4 — Attention & Transformers*
