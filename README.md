@@ -1,7 +1,7 @@
 <div align="center">
 
 <!-- HERO BANNER -->
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:1E1B4B,100:F97316&height=200&section=header&text=Deep%20Learning%20Mastery&fontSize=52&fontColor=ffffff&fontAlignY=38&desc=From%20Perceptrons%20to%20Diffusion%20Models%20—%20Theory%20%2B%20Code%20%2B%20Explanation&descAlignY=60&descColor=a78bfa" width="100%"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:1E1B4B,100:F97316&height=200&section=header&text=Deep%20Learning%20Mastery&fontSize=52&fontColor=ffffff&fontAlignY=38&desc=From%20Perceptrons%20to%20Diffusion%20Models%20—%20Theory%20%2B%20Code%20%2B%20Explanation&descAlignY=60&descColor=F97316" width="100%"/>
 
 <!-- BADGES -->
 <p>
@@ -435,6 +435,6 @@ You're free to use, fork, and build on this for personal and commercial projects
 **If this repository helped you, please consider giving it a ⭐**  
 *It takes 2 seconds and helps others discover it.*
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:24243e,50:302b63,100:0f0c29&height=100&section=footer" width="100%"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:1E1B4B,100:F97316&height=100&section=footer" width="100%"/>
 
 </div>
