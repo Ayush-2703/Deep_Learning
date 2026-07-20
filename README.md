@@ -1,9 +1,8 @@
 <div align="center">
 
-<!-- HERO BANNER -->
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:1E1B4B,100:F97316&height=220&section=header&text=Deep%20Learning%20Mastery&fontSize=52&fontColor=ffffff&fontAlignY=38&desc=From%20Perceptrons%20to%20Diffusion%20Models%20—%20Theory%20%2B%20Code%20%2B%20Explanation&descAlignY=60&descColor=F97316" width="100%"/>
+![Deep Learning Mastery](https://capsule-render.vercel.app/api?type=waving&color=0:1E1B4B,100:F97316&height=250&section=header&text=Deep%20Learning%20Mastery&fontSize=60&fontColor=ffffff&fontAlignY=36&animation=fadeIn&desc=From%20Perceptrons%20to%20Diffusion%20Models%20—%20Theory%20%2B%20Code%20%2B%20Explanation&descSize=30&descAlignY=58)
 
-<!-- BADGES -->
+
 <p>
   <img src="https://img.shields.io/badge/Python-3.10%2B-3776AB?style=for-the-badge&logo=python&logoColor=white"/>
   <img src="https://img.shields.io/badge/PyTorch-2.0%2B-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white"/>
@@ -20,13 +19,17 @@
 
 <br/>
 
-> **The most structured deep learning curriculum on GitHub.**  
-> Every topic ships with rigorous mathematical theory, production-grade PyTorch code, and a line-by-line explanation — nothing is left unexplained.
+**The most structured deep learning curriculum on GitHub.**  
+Every topic ships with rigorous mathematical theory, production-grade PyTorch code, and a line-by-line explanation — nothing is left unexplained.
 
 <br/>
 
 [![Open in Colab](https://img.shields.io/badge/Open%20in-Colab-F9AB00?style=for-the-badge&logo=googlecolab&logoColor=white)](https://colab.research.google.com/github/Ayush-2703/deep-learning-mastery)
 [![View on GitHub](https://img.shields.io/badge/View%20on-GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Ayush-2703/deep-learning-mastery)
+
+<br/>
+
+**Made with ❤️ by [Ayush Kumar Singh](https://github.com/Ayush-2703)
 
 </div>
 
