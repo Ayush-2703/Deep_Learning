@@ -1,6 +1,6 @@
 <div align="center">
 
-![Deep Learning Mastery](https://capsule-render.vercel.app/api?type=waving&color=0:1E1B4B,100:F97316&height=250&section=header&text=Deep%20Learning%20Mastery&fontSize=55&fontColor=ffffff&fontAlignY=36&animation=fadeIn&desc=From%20Perceptrons%20to%20Diffusion%20Models%20—%20Theory%20%2B%20Code%20%2B%20Explanation&descSize=25&descAlignY=58)
+![Deep Learning Mastery](https://capsule-render.vercel.app/api?type=waving&color=0:1E1B4B,100:F97316&height=250&section=header&text=Deep%20Learning%20Mastery&fontSize=60&fontColor=ffffff&fontAlignY=36&animation=fadeIn&desc=From%20Perceptrons%20to%20Diffusion%20Models%20—%20Theory%20%2B%20Code%20%2B%20Explanation&descSize=25&descAlignY=58)
 
 
 <p>
