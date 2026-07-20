@@ -1,7 +1,7 @@
 <div align="center">
 
 <!-- HERO BANNER -->
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:1E1B4B,100:F97316&height=200&section=header&text=Deep%20Learning%20Mastery&fontSize=52&fontColor=ffffff&fontAlignY=38&desc=From%20Perceptrons%20to%20Diffusion%20Models%20—%20Theory%20%2B%20Code%20%2B%20Explanation&descAlignY=60&descColor=F97316" width="100%"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:1E1B4B,100:F97316&height=250&section=header&text=Deep%20Learning%20Mastery&fontSize=52&fontColor=ffffff&fontAlignY=38&desc=From%20Perceptrons%20to%20Diffusion%20Models%20—%20Theory%20%2B%20Code%20%2B%20Explanation&descAlignY=60&descColor=F97316" width="100%"/>
 
 <!-- BADGES -->
 <p>
