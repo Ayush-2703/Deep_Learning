@@ -24,33 +24,33 @@
 
 ```
                     ENCODER STACK (N layers)          DECODER STACK (N layers)
-Source tokens              │                                    │        Target tokens
-      │                     ▼                                    ▼             │
-      ▼             ┌───────────────┐                   ┌───────────────┐      ▼
- Embedding           │ Self-Attention │                   │ Masked Self-  │  Embedding
-      +               │  (bidirectional)│                   │  Attention     │      +
-Positional            └───────┬───────┘                   │  (causal)      │  Positional
- Encoding                     │  +residual, norm            └───────┬───────┘   Encoding
-      │                       ▼                                    │  +residual, norm
+Source tokens               │                                    │           Target tokens
+      │                     ▼                                    ▼               │
+      ▼             ┌─────────────────┐                   ┌───────────────┐      ▼
+ Embedding          │ Self-Attention  │                   │ Masked Self-  │  Embedding
+      +             │  (bidirectional)│                   │  Attention    │      +
+Positional          └───────┬─────────┘                   │  (causal)     │  Positional
+ Encoding                   │  +residual, norm            └───────┬───────┘   Encoding
+      │                     ▼                                    │  +residual, norm
       │              ┌───────────────┐                            ▼
-      │              │  Feed-Forward  │                   ┌───────────────┐
-      │              └───────┬───────┘                    │ Cross-Attention│◄──── ENCODER
-      │                       │  +residual, norm            │ (Q=decoder,    │      OUTPUT
-      │                       ▼                             │  K,V=encoder)  │
-      │              (repeat N times)                       └───────┬───────┘
+      │              │  Feed-Forward │                   ┌─────────────────┐
+      │              └───────┬───────┘                   │ Cross-Attention │◄──── ENCODER
+      │                       │  +residual, norm         │ (Q=decoder,     │      OUTPUT
+      │                       ▼                          │  K,V=encoder)   │
+      │              (repeat N times)                    └─────────┬───────┘
       │                       │                                    │  +residual, norm
       │                       ▼                                    ▼
-      │              Encoder Output ─────────────────────►┌───────────────┐
-      │                                                     │  Feed-Forward  │
-      │                                                     └───────┬───────┘
-      │                                                             │  +residual, norm
-      │                                                             ▼
+      │              Encoder Output ─────────────────────►┌────────────────┐
+      │                                                   │  Feed-Forward  │
+      │                                                   └────────┬───────┘
+      │                                                            │  +residual, norm
+      │                                                            ▼
       │                                                    (repeat N times)
-      │                                                             │
-      │                                                             ▼
+      │                                                            │
+      │                                                            ▼
       │                                                    Linear + Softmax
-      │                                                             │
-      │                                                             ▼
+      │                                                            │
+      │                                                            ▼
       │                                                    Output token probabilities
 ```
 
