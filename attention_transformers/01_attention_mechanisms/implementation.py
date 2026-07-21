@@ -1,7 +1,7 @@
 """
 Topic: Attention Mechanisms -- Scaled Dot-Product & Multi-Head
 ================================================================================
-Repository : deep-learning-mastery/phase-4-attention-transformers/01-attention-mechanisms/
+Repository : deep-learning/attention-transformers/01-attention-mechanisms/
 File       : implementation.py
 
 Sections:
