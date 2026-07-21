@@ -1,6 +1,6 @@
 # Code Explanation: Attention Mechanisms
 
-**Phase 4 — Topic 1 | `implementation.py` walkthrough**
+**`implementation.py` walkthrough**
 
 ---
 
