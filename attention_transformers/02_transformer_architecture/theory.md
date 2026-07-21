@@ -1,6 +1,6 @@
 # Theory: The Transformer Architecture
 
-**Phase 4 — Topic 2 | Deep Learning Mastery Repository**
+**Deep Learning Mastery Repository**
 
 ---
 
