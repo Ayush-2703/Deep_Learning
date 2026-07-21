@@ -31,7 +31,7 @@ Source tokens               │                                    │          
       +             │  (bidirectional)│                   │  Attention    │      +
 Positional          └───────┬─────────┘                   │  (causal)     │  Positional
  Encoding                   │  +residual, norm            └───────┬───────┘   Encoding
-      │                     ▼                                    │  +residual, norm
+      │                     ▼                                     │  +residual, norm
       │              ┌───────────────┐                            ▼
       │              │  Feed-Forward │                   ┌─────────────────┐
       │              └───────┬───────┘                   │ Cross-Attention │◄──── ENCODER
