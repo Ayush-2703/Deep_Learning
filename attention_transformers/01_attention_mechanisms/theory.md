@@ -1,6 +1,6 @@
 # Theory: Attention Mechanisms — Scaled Dot-Product & Multi-Head Attention
 
-**Phase 4 — Topic 1 | Deep Learning Mastery Repository**
+**Deep Learning Mastery Repository**
 
 ---
 
