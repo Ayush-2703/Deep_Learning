@@ -283,5 +283,3 @@ comparison table was built around.
 | Presenting Big-O complexity as if it were empirically self-evident | Actually measured wall-clock time across 6 sequence lengths to show the real crossover |
 
 ---
-
-*Next: [Topic 2 — The Transformer Architecture](../02-transformer-architecture/explanation.md)*
