@@ -73,7 +73,7 @@ Each of the `N` identical encoder layers consists of TWO sub-layers:
 Each sub-layer wrapped with a RESIDUAL connection (§5) and LAYER
 NORMALIZATION (§6):
 
-  x = x + SelfAttention(x)     (+ LayerNorm, placement discussed in §7)
+  x = x + SelfAttention(x)      (+ LayerNorm, placement discussed in §7)
   x = x + FFN(x)                (+ LayerNorm)
 ```
 
@@ -210,8 +210,7 @@ x = LayerNorm(x + Sublayer(x))          (normalize AFTER the residual addition)
 ### Pre-LN (Modern Standard, e.g. GPT-2 onward)
 
 ```
-x = x + Sublayer(LayerNorm(x))          (normalize BEFORE the sublayer, residual
-                                          path stays UN-normalized)
+x = x + Sublayer(LayerNorm(x))          (normalize BEFORE the sublayer, residual path stays UN-normalized)
 ```
 
 ### Why This Ordering Matters for Training Stability
@@ -242,7 +241,7 @@ choice, especially as depth increases.
 
 ```
 Input: token indices → Embedding lookup → embeddings ∈ ℝ^(L × d_model)
-Scaled: embeddings × √d_model                (BEFORE adding positional encoding)
+Scaled: embeddings × √d_model                 (BEFORE adding positional encoding)
 Then:   + PositionalEncoding(position)        (Topic 1 §8)
 ```
 
@@ -295,14 +294,14 @@ the theoretical minimum loss of a hard one-hot target).
 ## 10. Why "Attention Is All You Need"
 
 ```
-                        RNN Seq2Seq+Attn      Transformer
+                        RNN Seq2Seq+Attn           Transformer
                         (Phase 3 Topic 3)
-─────────────────────────────────────────────────────────────
-Cross-position mixing    Sequential RNN         Self-attention
+─────────────────────────────────────────────────────────────────────────
+Cross-position mixing    Sequential RNN           Self-attention
                          recurrence + Bahdanau   (parallel, direct)
                          attention for cross-seq
 
-Training parallelism     Sequential per          FULLY parallel across
+Training parallelism     Sequential per           FULLY parallel across
                          time-step (even with     sequence positions
                          teacher forcing, the      (causal mask lets ALL
                          decoder RNN must           positions' losses be
