@@ -100,9 +100,9 @@ Each of the `N` identical decoder layers consists of THREE sub-layers:
 
 Each sub-layer wrapped with residual connection + LayerNorm:
 
-  x = x + MaskedSelfAttention(x)         (+ LayerNorm)
+  x = x + MaskedSelfAttention(x)           (+ LayerNorm)
   x = x + CrossAttention(Q=x, K=V=enc_out) (+ LayerNorm)
-  x = x + FFN(x)                          (+ LayerNorm)
+  x = x + FFN(x)                           (+ LayerNorm)
 ```
 
 ### Why Masked Self-Attention BEFORE Cross-Attention (Not After)
