@@ -1,5 +1,5 @@
 """
-Phase 4 -- Topic 2: The Transformer Architecture
+Topic: The Transformer Architecture
 ======================================================
 Repository : deep-learning/attention-transformers/02-transformer-architecture/
 File       : implementation.py
