@@ -4,7 +4,7 @@ Topic: The Transformer Architecture
 Repository : deep-learning/attention-transformers/02-transformer-architecture/
 File       : implementation.py
 
-Task: same character-level digit-sequence REVERSAL task as Phase 3 Topic 3,
+Task: same character-level digit-sequence REVERSAL task as Topic 3,
 enabling a DIRECT comparison between the RNN-based Seq2Seq+Attention model
 and this fully attention-based Transformer.
 
