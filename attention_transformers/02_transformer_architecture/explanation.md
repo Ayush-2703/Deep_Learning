@@ -270,4 +270,3 @@ converged at this specific length within the disclosed training budget.
 ---
 
 *Previous: [Topic 1 — Attention Mechanisms]
-*Next: [Topic 3 — BERT Encoder Pretraining]
