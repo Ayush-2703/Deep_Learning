@@ -268,5 +268,3 @@ converged at this specific length within the disclosed training budget.
 | Cherry-picking a perfectly-solved example for the attention heatmap | Used a fixed, pre-determined example regardless of outcome |
 
 ---
-
-*Previous: [Topic 1 — Attention Mechanisms]
