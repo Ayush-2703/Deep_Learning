@@ -1,6 +1,6 @@
 # Code Explanation: The Transformer Architecture
 
-**Phase 4 — Topic 2 | `implementation.py` walkthrough**
+**`implementation.py` walkthrough**
 
 ---
 
