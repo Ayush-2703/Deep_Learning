@@ -233,12 +233,12 @@ token representations) differ completely.
 ## 8. BERT vs GPT: Bidirectional vs Unidirectional Context
 
 ```
-                      BERT (Encoder-only)         GPT (Decoder-only, Topic 4)
-──────────────────────────────────────────────────────────────────────────
-Attention direction    Bidirectional (full)         Causal (left-to-right only)
-Pretraining objective   Masked Language Modeling      Next-token prediction
-Natural use case        Understanding tasks           Generation tasks
-                        (classification, extraction,   (open-ended text
+                           BERT (Encoder-only)          GPT (Decoder-only, Topic 4)
+────────────────────────────────────────────────────────────────────────────────────────
+Attention direction     Bidirectional (full)            Causal (left-to-right only)
+Pretraining objective   Masked Language Modeling        Next-token prediction
+Natural use case        Understanding tasks             Generation tasks
+                        (classification, extraction,    (open-ended text
                          similarity, QA)                completion, dialogue)
 Can generate text        NOT directly (no natural       YES (autoregressive
  autoregressively?       left-to-right generation        generation is the
