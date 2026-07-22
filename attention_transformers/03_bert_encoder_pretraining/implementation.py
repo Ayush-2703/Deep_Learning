@@ -8,7 +8,7 @@ Synthetic corpus: sentences generated from one of 4 "topics", each topic
 having a characteristic (noisy) token distribution -- gives MLM pretraining
 genuine learnable structure (predicting a masked token requires inferring
 the sentence's topic from surrounding context).
-
+ 
 Sections:
   A | Synthetic topic-structured corpus generator
   B | 80/10/10 masking strategy -- implemented + verified
