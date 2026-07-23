@@ -194,6 +194,3 @@ though pretraining still closes the remaining gap to a PERFECT 100%.
 | Small epoch-to-epoch MLM accuracy fluctuation mistaken for instability | Attributed to genuine re-masking variance (fresh stochastic masks per epoch) |
 
 ---
-
-*Previous: [Topic 2 — The Transformer Architecture](../02-transformer-architecture/explanation.md)*
-*Next: [Topic 4 — GPT Decoder & Autoregressive Generation](../04-gpt-decoder-autoregressive/explanation.md)*
