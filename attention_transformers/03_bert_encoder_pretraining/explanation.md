@@ -1,6 +1,6 @@
 # Code Explanation: BERT — Bidirectional Encoder Pretraining
 
-**Phase 4 — Topic 3 | `implementation.py` walkthrough**
+**`implementation.py` walkthrough**
 
 ---
 
