@@ -215,9 +215,9 @@ glance than raw log-loss values.
 ## 7. Why GPT Excels at Generation, BERT Does Not
 
 ```
-                          GPT                          BERT
-──────────────────────────────────────────────────────────────
-Training objective        Next-token prediction         Masked LM
+                               GPT                          BERT
+──────────────────────────────────────────────────────────────────────────────
+Training objective        Next-token prediction           Masked LM
                           (matches generation exactly)   (bidirectional,
                                                           mismatches
                                                           generation)
