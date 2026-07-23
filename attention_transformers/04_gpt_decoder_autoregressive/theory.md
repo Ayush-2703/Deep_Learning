@@ -84,9 +84,9 @@ available during genuine left-to-right generation.
 ## 3. GPT's Decoder Block vs the Full Transformer's Decoder
 
 ```
-                      Full Transformer Decoder    GPT Decoder
-                      (Topic 2 §3)                (this topic)
-──────────────────────────────────────────────────────────────
+                      Full Transformer Decoder       GPT Decoder
+                      (Topic 2 §3)                  (this topic)
+────────────────────────────────────────────────────────────────────────────
 Masked self-attention  YES                          YES
 Cross-attention         YES (attends to a            NO (no separate
                         separate ENCODER              source sequence
