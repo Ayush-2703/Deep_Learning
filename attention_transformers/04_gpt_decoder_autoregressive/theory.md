@@ -1,6 +1,6 @@
 # Theory: GPT — Decoder-Only Autoregressive Generation
 
-**Phase 4 — Topic 4 | Deep Learning Mastery Repository**
+**Deep Learning Mastery Repository**
 
 ---
 
