@@ -2,7 +2,7 @@
 
 **`implementation.py` walkthrough**
 
----
+--- 
 
 ## 1. Section A — Deliberately Imperfect Topic Structure
 
