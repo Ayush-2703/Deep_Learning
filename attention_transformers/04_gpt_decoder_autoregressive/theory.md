@@ -29,24 +29,24 @@ and Topic 3's encoder-only BERT):
 
 ```
                   GPT DECODER STACK (N layers)
-Token sequence          │
+Token sequence           │
       │                  ▼
-      ▼           ┌───────────────┐
- Embedding         │ Masked (causal)│
-      +             │ Self-Attention │
-Positional          └───────┬───────┘
- Encoding                    │  +residual, norm
-      │                       ▼
+      ▼           ┌────────────────┐
+ Embedding        │ Masked (causal)│
+      +           │ Self-Attention │
+Positional        └────────┬───────┘
+ Encoding                  │  +residual, norm
+      │                    ▼
       │              ┌───────────────┐
-      │              │  Feed-Forward  │
+      │              │  Feed-Forward │
       │              └───────┬───────┘
-      │                       │  +residual, norm
+      │                      │  +residual, norm
       │              (repeat N times)
-      │                       │
-      │                       ▼
+      │                      │
+      │                      ▼
       │              Linear + Softmax
-      │                       │
-      │                       ▼
+      │                      │
+      │                      ▼
       │              Next-token probabilities
 ```
 
