@@ -1,5 +1,5 @@
 """
-Phase 4 -- Topic 4: GPT -- Decoder-Only Autoregressive Generation
+Topic: GPT -- Decoder-Only Autoregressive Generation
 ======================================================================
 Repository : deep-learning/phase-4-attention-transformers/04-gpt-decoder-autoregressive/
 File       : implementation.py
