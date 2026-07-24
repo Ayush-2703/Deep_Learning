@@ -224,5 +224,3 @@ begins, rather than an isolated anomaly.
 | Presenting "Transformers train faster" as universally true regardless of scale | Connected the GPT-slower-than-LSTM result directly to Topic 1's own measured crossover point |
 
 ---
-
-*Previous: [Topic 3 — BERT Encoder Pretraining]
