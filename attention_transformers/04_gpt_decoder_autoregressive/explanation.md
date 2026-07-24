@@ -1,6 +1,6 @@
 # Code Explanation: GPT — Decoder-Only Autoregressive Generation
 
-**Phase 4 — Topic 4 | `implementation.py` walkthrough**
+**`implementation.py` walkthrough**
 
 ---
 
