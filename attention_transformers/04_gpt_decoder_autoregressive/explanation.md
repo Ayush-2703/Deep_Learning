@@ -225,4 +225,4 @@ begins, rather than an isolated anomaly.
 
 ---
 
-*Previous: [Topic 3 — BERT Encoder Pretraining](../03-bert-encoder-pretraining/explanation.md)*
+*Previous: [Topic 3 — BERT Encoder Pretraining]
