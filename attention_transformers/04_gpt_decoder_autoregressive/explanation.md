@@ -226,4 +226,4 @@ begins, rather than an isolated anomaly.
 ---
 
 *Previous: [Topic 3 — BERT Encoder Pretraining](../03-bert-encoder-pretraining/explanation.md)*
-*Next: [Topic 5 — Vision Transformer (Extra)](../05-extra-vision-transformer/explanation.md)*
+*Next: [Topic 5 — Vision Transformer (Extra)]
