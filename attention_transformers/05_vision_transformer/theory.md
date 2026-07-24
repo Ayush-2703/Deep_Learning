@@ -140,17 +140,17 @@ pure, unmodified sequence-Transformer machinery.
 ### What CNNs Get "For Free" Architecturally
 
 ```
-Locality:               a CNN kernel only looks at a small local
-                        neighborhood (Phase 2 Topic 1 §9's receptive
-                        field) -- the ARCHITECTURE ITSELF assumes nearby
-                        pixels are more likely to be related than distant
-                        ones.
+Locality:                  a CNN kernel only looks at a small local
+                           neighborhood (Phase 2 Topic 1 §9's receptive
+                           field) -- the ARCHITECTURE ITSELF assumes nearby
+                           pixels are more likely to be related than distant
+                           ones.
 
-Translation equivariance: the SAME kernel is applied at every spatial
-                        position (Phase 2 Topic 1 §1) -- the architecture
-                        ITSELF assumes a learned feature detector should
-                        behave identically regardless of WHERE in the
-                        image it fires.
+Translation equivariance:  the SAME kernel is applied at every spatial
+                           position (Phase 2 Topic 1 §1) -- the architecture
+                           ITSELF assumes a learned feature detector should
+                           behave identically regardless of WHERE in the
+                           image it fires.
 ```
 
 ### What ViT Must Learn From Scratch
