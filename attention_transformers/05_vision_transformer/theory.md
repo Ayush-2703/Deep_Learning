@@ -1,6 +1,6 @@
 # Theory: Vision Transformer (ViT)
 
-**Phase 4 — Topic 5 (Extra) | Deep Learning Mastery Repository**
+**Deep Learning Mastery Repository**
 
 ---
 
