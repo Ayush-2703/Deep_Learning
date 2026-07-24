@@ -1,7 +1,7 @@
 """
 Phase 4 -- Topic 4: GPT -- Decoder-Only Autoregressive Generation
 ======================================================================
-Repository : deep-learning-mastery/phase-4-attention-transformers/04-gpt-decoder-autoregressive/
+Repository : deep-learning/phase-4-attention-transformers/04-gpt-decoder-autoregressive/
 File       : implementation.py
 
 Synthetic task: a noisy "counting" Markov chain -- token i is followed by
