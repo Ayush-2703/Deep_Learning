@@ -1,6 +1,6 @@
 # Code Explanation: Vision Transformer (ViT)
 
-**Phase 4 — Topic 5 (Extra) | `implementation.py` walkthrough**
+**`implementation.py` walkthrough**
 
 ---
 
