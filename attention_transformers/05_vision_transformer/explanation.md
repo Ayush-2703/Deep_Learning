@@ -184,8 +184,6 @@ complementary to transfer learning.
 
 ---
 
-*Previous: [Topic 4 — GPT Decoder & Autoregressive Generation](../04-gpt-decoder-autoregressive/explanation.md)*
-
 **Phase 4 — Attention & Transformers is now complete.** All 5 topics
 (Attention Mechanisms, The Transformer Architecture, BERT Encoder
 Pretraining, GPT Decoder & Autoregressive Generation, and Vision
@@ -193,5 +191,3 @@ Transformer) have full theory, working implementation, and line-by-line
 explanation files — every implementation executed end-to-end with real,
 honestly-reported results, including the messy, surprising, and
 occasionally underwhelming ones alongside the clean confirmations.
-
-*Next: Phase 5 — Generative AI*
