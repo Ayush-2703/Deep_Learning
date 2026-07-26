@@ -1,4 +1,4 @@
-**Explanation: Autoencoders & VAEs**
+**Code Explanation: Autoencoders & VAEs**
 
 ## Table of Contents
 1. [Imports & Setup](#1-imports--setup)
