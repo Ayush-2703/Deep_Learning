@@ -1,4 +1,3 @@
-
 **Autoencoders & Variational Autoencoders (VAEs)**
 
 ---
