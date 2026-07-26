@@ -1,5 +1,7 @@
+
 **Autoencoders & Variational Autoencoders (VAEs)**
 
+---
 ## Table of Contents
 1. [The Information Bottleneck Principle](#1-the-information-bottleneck-principle)
 2. [Vanilla Autoencoder Architecture](#2-vanilla-autoencoder-architecture)
