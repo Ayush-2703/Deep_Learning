@@ -1,4 +1,4 @@
-Autoencoders & Variational Autoencoders (VAEs)
+**Autoencoders & Variational Autoencoders (VAEs)**
 
 ## Table of Contents
 1. [The Information Bottleneck Principle](#1-the-information-bottleneck-principle)
