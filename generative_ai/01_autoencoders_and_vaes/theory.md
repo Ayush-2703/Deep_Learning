@@ -1,4 +1,3 @@
-** (VAEs)**
 <div align="center">
 
 ![Theory: Autoencoders & Variational Autoencoders](https://capsule-render.vercel.app/api?type=waving&color=0:0B0C0E,50:363B45,100:586174&height=200&section=header&text=Theory:%20Autoencoder%20and%20Variational%20Autoencoders&Fields&fontSize=30&fontColor=ffffff&fontAlignY=25&animation=fadeIn&desc=Deep%20Learning&descSize=25&descAlignY=58)
@@ -295,3 +294,10 @@ with open('/mnt/agents/output/phase5_01_vae_theory.md', 'w') as f:
     f.write(theory_md)
 print("Saved theory.md")
 
+---
+
+<div align="center">
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0B0C0E,50:363B45,100:586174&height=70&section=footer" width="100%"/>
+
+</div>
