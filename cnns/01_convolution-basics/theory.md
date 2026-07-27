@@ -1,6 +1,6 @@
 <div align="center">
 
-![Theory: Convolutions, Kernels, Pooling & Receptive Fields](https://capsule-render.vercel.app/api?type=waving&color=0:1E1B4B,100:F97316&height=250&section=header&text=Theory:%20Convolutions,%20Kernels,%20Pooling%20and%20ReceptiveFields&fontSize=60&fontColor=ffffff&fontAlignY=36&animation=fadeIn&desc=Deep%20Learning&descSize=25&descAlignY=58)
+![Theory: Convolutions, Kernels, Pooling & Receptive Fields](https://capsule-render.vercel.app/api?type=waving&color=0:1E1B4B,100:F97316&height=250&section=header&text=Theory:%20Convolutions,%20Kernels,%20Pooling%20and%20ReceptiveFields&fontSize=40&fontColor=ffffff&fontAlignY=25&animation=fadeIn&desc=Deep%20Learning&descSize=25&descAlignY=58)
 
 <br/>
 
