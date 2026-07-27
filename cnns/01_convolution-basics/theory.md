@@ -1,6 +1,12 @@
-# Theory: Convolutions, Kernels, Pooling & Receptive Fields
+<div align="center">
 
-**Deep Learning Mastery Repository**
+![Theory: Convolutions, Kernels, Pooling & Receptive Fields](https://capsule-render.vercel.app/api?type=waving&color=0:1E1B4B,100:F97316&height=250&section=header&text=Theory:%20Convolutions,%20Kernels,%20Pooling%20and%20ReceptiveFields&fontSize=60&fontColor=ffffff&fontAlignY=36&animation=fadeIn&desc=Deep%20Learning&descSize=25&descAlignY=58)
+
+<br/>
+
+**Made with ❤️ by [Ayush Kumar Singh](https://github.com/Ayush-2703)
+
+</div>
 
 ---
 
