@@ -168,9 +168,9 @@ Without Reparameterization:        With Reparameterization:
 ┌──────────┐                       ┌──────────┐
 │    μ     │                       │    μ     │
 │    σ     │───► Sample ──► z      │    σ     │───► z = μ + σ⊙ε
-└──────────┘      ↑                 └──────────┘      ↑
-                  │                                   │
-            ┌─────┘                             ┌─────┘
+└──────────┘      ↑                └──────────┘      ↑
+                  │                                  │
+            ┌─────┘                             ┌────┘
             │ ε ~ N(0,I)                        │ ε ~ N(0,I)
             │ (stops gradient)                  │ (detached constant)
 ```
