@@ -1,6 +1,6 @@
 <div align="center">
 
-![Theory: Convolutions, Kernels, Pooling & Receptive Fields](https://capsule-render.vercel.app/api?type=waving&color=0:0B0C0E,50:363B45,100:586174&height=250&section=header&text=Theory:%20Convolutions,%20Kernels,%20Pooling%20and%20ReceptiveFields&fontSize=30&fontColor=ffffff&fontAlignY=25&animation=fadeIn&desc=Deep%20Learning&descSize=25&descAlignY=58)
+![Theory: Convolutions, Kernels, Pooling & Receptive Fields](https://capsule-render.vercel.app/api?type=waving&color=0:0B0C0E,50:363B45,100:586174&height=200&section=header&text=Theory:%20Convolutions,%20Kernels,%20Pooling%20and%20ReceptiveFields&fontSize=30&fontColor=ffffff&fontAlignY=25&animation=fadeIn&desc=Deep%20Learning&descSize=25&descAlignY=58)
 <br/>
 **Made with ❤️ by [Ayush Kumar Singh](https://github.com/Ayush-2703)
 </div>
@@ -493,3 +493,10 @@ closely related Winograd/FFT-based) algorithms internally.
 | Global avg pooling | (1/HW)Σᵢⱼ X[:,i,j] |
 | im2col matmul | Y = W_row @ X_col |
 
+---
+
+<div align="center">
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0B0C0E,50:363B45,100:586174&height=70&section=footer" width="100%"/>
+
+</div>
