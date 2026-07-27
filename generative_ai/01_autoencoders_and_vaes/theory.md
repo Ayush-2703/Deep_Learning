@@ -58,11 +58,11 @@ This forces the network to learn **salient features** rather than identity mappi
 Input x ∈ R^d          Latent z ∈ R^k           Reconstruction x̂ ∈ R^d
     │                        │                           │
     ▼                        ▼                           ▼
-┌─────────┐             ┌─────────┐                 ┌─────────┐
-│  Linear │             │Bottleneck│                │  Linear │
-│ d → 512 │───────────▶│  k=32    │───────────────▶│ 512 → d │
-│  + ReLU │             │          │                │  + Sigmoid│
-└─────────┘             └──────────┘                 └─────────┘
+┌─────────┐             ┌──────────┐                 ┌───────────┐
+│  Linear │             │Bottleneck│                 │  Linear   │
+│ d → 512 │───────────▶│  k=32     │───────────────▶│ 512 → d   │
+│  + ReLU │             │          │                 │  + Sigmoid│
+└─────────┘             └──────────┘                 └───────────┘
     │                        │                           │
     └───── Encoder ──────────┘                           │
                              └────── Decoder ────────────┘
