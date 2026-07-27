@@ -1,8 +1,21 @@
+"""
+Topic: Autoencoders & Variational Autoencoders (VAEs)
+============================================================
+Repository : deep-learning/foundations/01_autoencoders_and_vaes/
+File       : implementation.py
+Framework  : PyTorch 2.x | NumPy | scikit-learn | matplotlib
+Python     : 3.10+
 
-"""implementation_py = r""""""
-Phase 5, Topic 1: Autoencoders & Variational Autoencoders (VAEs)
 Implementation: Vanilla Autoencoder + VAE on MNIST
-PyTorch, CPU/GPU compatible, fully self-contained
+Import Library & Configuration
+SECTION 1: DATA LOADING — MNIST with normalization to [0, 1]
+SECTION 2: VANILLA AUTOENCODER
+SECTION 3: VARIATIONAL AUTOENCODER
+SECTION 4: LOSS FUNCTIONS
+SECTION 5: TRAINING LOOP
+SECTION 6: VISUALIZATION UTILITIES
+SECTION 7: MAIN EXECUTION
+SECTION 8: VISUALIZATION
 """
 
 import torch
