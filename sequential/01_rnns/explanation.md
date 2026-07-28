@@ -1,6 +1,10 @@
-# Code Explanation: Recurrent Neural Networks (RNNs)
+# : Recurrent Neural Networks (RNNs)
+<div align="center">
+
+![Code Explanation: Recurrent Neural Networks](https://capsule-render.vercel.app/api?type=waving&color=0:0B0C0E,50:363B45,100:586174&height=200&section=header&text=Code%20Explanation:%20Recurrent%20Neural%20Networks%20(RNNs)&Fields&fontSize=30&fontColor=ffffff&fontAlignY=25&animation=fadeIn&desc=Deep%20Learning&descSize=25&descAlignY=58)
 
 **`implementation.py` walkthrough**
+</div>
 
 ---
 
