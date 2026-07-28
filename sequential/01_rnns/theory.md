@@ -125,3 +125,10 @@ Trades some gradient accuracy for computational tractability.
 | BPTT gradient | ∂L/∂Wₕₕ = Σₜ ∂Lₜ/∂Wₕₕ |
 | Jacobian product | ∂hₜ/∂hₖ = ∏ᵢ diag(tanh'(zᵢ))·Wₕₕᵀ |
 | Bidirectional | hₜ = [→hₜ ; ←hₜ] |
+---
+
+<div align="center">
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0B0C0E,50:363B45,100:586174&height=70&section=footer" width="100%"/>
+
+</div>
