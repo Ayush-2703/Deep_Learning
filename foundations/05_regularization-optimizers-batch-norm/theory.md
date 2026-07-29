@@ -1,7 +1,7 @@
 # Theory:
 <div align="center">
 
-![Theory:  Regularization, Optimizers, Batch Normalization & Early Stopping](https://capsule-render.vercel.app/api?type=waving&color=0:0B0C0E,50:363B45,100:586174&height=200&section=header&text=Theory:%20Regularization,%20Optimizers,%20Batch%20Normalization%20and%20Early%20Stopping&Fields&fontSize=20&fontColor=ffffff&fontAlignY=25&animation=fadeIn&desc=Deep%20Learning&descSize=25&descAlignY=58)
+![Theory:  Regularization, Optimizers, Batch Normalization & Early Stopping](https://capsule-render.vercel.app/api?type=waving&color=0:0B0C0E,50:363B45,100:586174&height=200&section=header&text=Theory:%20Regularization,%20Optimizers,%20Batch%20Normalization%20and%20Early%20Stopping&Fields&fontSize=26&fontColor=ffffff&fontAlignY=25&animation=fadeIn&desc=Deep%20Learning&descSize=25&descAlignY=58)
 <br/>
 **Made with ❤️ by [Ayush Kumar Singh](https://github.com/Ayush-2703)**
 </div>
