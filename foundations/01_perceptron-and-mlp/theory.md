@@ -590,6 +590,11 @@ L = -1/N Σᵢ₌₁ᴺ [ yᵢ log(ŷᵢ) + (1-yᵢ) log(1-ŷᵢ) ]
 
 2012  Krizhevsky et al.     → AlexNet wins ImageNet by massive margin — GPU era begins
 ```
-
 ---
+
+<div align="center">
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0B0C0E,50:363B45,100:586174&height=70&section=footer" width="100%"/>
+
+</div>
 
