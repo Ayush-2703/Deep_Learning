@@ -407,3 +407,11 @@ Step 4: Consider epoch of best validation performance
 | KL | Σ P log(P/Q) | Distribution matching |
 | Focal | −(1−ŷ)^γ y log ŷ | Imbalanced detection |
 | Bias² + Var | E[(y−ŷ)²] − σ²_noise | Error decomposition |
+
+---
+
+<div align="center">
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0B0C0E,50:363B45,100:586174&height=70&section=footer" width="100%"/>
+
+</div>
