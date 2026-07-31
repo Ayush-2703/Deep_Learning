@@ -47,13 +47,13 @@ still used today:
 - No fully-connected hidden layers — all-convolutional
 
 ```
-G:  z [B,100,1,1] -> ConvTranspose -> [B,128,7,7]
+G:  z [B,100,1,1]  -> ConvTranspose -> [B,128,7,7]
                    -> ConvTranspose -> [B,64,14,14]
-                   -> ConvTranspose -> [B,1,28,28] -> Tanh
+                   -> ConvTranspose -> [B,1,28,28]  -> Tanh
 
-D:  x [B,1,28,28] -> Conv(stride2) -> [B,64,14,14] -> LeakyReLU
-                   -> Conv(stride2) -> [B,128,7,7] -> LeakyReLU
-                   -> Conv -> [B,1,1,1] -> Sigmoid
+D:  x [B,1,28,28]  -> Conv(stride2) -> [B,64,14,14] -> LeakyReLU
+                   -> Conv(stride2) -> [B,128,7,7]  -> LeakyReLU
+                   -> Conv          -> [B,1,1,1]    -> Sigmoid
 ```
 
 ## 4. CycleGAN — unpaired image-to-image translation
