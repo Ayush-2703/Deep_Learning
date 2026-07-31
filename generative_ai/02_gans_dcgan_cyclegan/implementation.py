@@ -1,5 +1,5 @@
 """
-Phase 5 - Topic 2: GANs - DCGAN (full, trained) + CycleGAN (minimal skeleton)
+Topic 2: GANs - DCGAN (full, trained) + CycleGAN (minimal skeleton)
 CPU-only, synthetic data, PyTorch.
 
 Run: python3 implementation.py
