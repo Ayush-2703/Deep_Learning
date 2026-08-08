@@ -1,14 +1,9 @@
 """
 Topic: Perceptron & Multilayer Perceptron (MLP)
 ============================================================
-Repository : deep-learning/foundations/01-perceptron-and-mlp/
+Repository : Deep_Learning/foundations/01_perceptron-and-mlp/
 File       : implementation.py
-Framework  : PyTorch 2.x | NumPy | scikit-learn | matplotlib
-Python     : 3.10+
-
-Run:
-    pip install torch numpy scikit-learn matplotlib seaborn
-    python implementation.py
+Python     : 3
 
 What this file demonstrates
 ────────────────────────────
