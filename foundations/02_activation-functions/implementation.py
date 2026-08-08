@@ -1,14 +1,9 @@
 """
 Topic: Activation Functions
 ========================================
-Repository : deep-learning/foundations/02-activation-functions/
+Repository : Deep_Learning/foundations/02_activation-functions/
 File       : implementation.py
-Framework  : PyTorch 2.x | NumPy | scikit-learn | matplotlib
-Python     : 3.10+
-
-Run:
-    pip install torch numpy scikit-learn matplotlib
-    python implementation.py
+Python     : 3
 
 What this file demonstrates
 ────────────────────────────
