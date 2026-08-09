@@ -1,14 +1,10 @@
 """
 Topic: Gradient Descent & Backpropagation
 ======================================================
-Repository : deep-learning/foundations/03-gradient-descent-backprop/
+Repository : Deep_Learning/foundations/03_gradient_descent_and_backprop/
 File       : implementation.py
-Framework  : NumPy (manual backprop) + PyTorch (autograd demo) + matplotlib
-Python     : 3.10+
+Python     : 3
 
-Run:
-    pip install torch numpy scikit-learn matplotlib
-    python implementation.py
 
 What this file demonstrates
 ────────────────────────────
