@@ -1,10 +1,12 @@
 """
 Topic: Regularization, Optimizers, BatchNorm & Early Stopping
 ==========================================================================
-Repository : deep-learning/foundations/05-regularization-optimizers-batchnorm/
+Repository : Deep_Learning/foundations/05_regularization-optimizers-batch-norm/
 File       : implementation.py
+Python     : 3
 
-Sections:
+What this file demonstrates
+────────────────────────────
   A │ L1 vs L2 regularization — weight magnitude and sparsity comparison
   B │ Dropout — train/eval mode difference, effect on generalization
   C │ Batch Normalization — training stability and convergence speed
