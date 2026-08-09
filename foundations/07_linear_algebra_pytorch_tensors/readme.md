@@ -1,8 +1,7 @@
 <div align="center">
 
 ![Theory: Linear Algebra & Calculus Refresher + PyTorch Tensor Fundamentals](https://capsule-render.vercel.app/api?type=waving&color=0:0B0C0E,50:363B45,100:586174&height=200&section=header&text=Theory:%20Linear%20Algebra%20and%20Calculus%20Refresher%20+%20PyTorch%20Tensor%20Fundamentals&Fields&fontSize=23&fontColor=ffffff&fontAlignY=25&animation=fadeIn&desc=Deep%20Learning&descSize=20&descAlignY=58)
-<br/>
-**Made with ❤️ by [Ayush Kumar Singh](https://github.com/Ayush-2703)**
+
 </div>
 
 ---
