@@ -1,6 +1,6 @@
-# Code Explanation: Loss Functions, Overfitting & Bias-Variance
+#Code Explanation: Loss Functions, Overfitting & Bias-Variance
 
-**Phase 1 — Topic 4 | `implementation.py` walkthrough**
+**`implementation.py` walkthrough**
 
 ---
 
