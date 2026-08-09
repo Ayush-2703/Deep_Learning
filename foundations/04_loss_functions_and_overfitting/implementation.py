@@ -1,8 +1,9 @@
 """
 Phase 1 — Topic 4: Loss Functions, Overfitting & Bias-Variance Trade-off
 =========================================================================
-Repository : deep-learning-mastery/phase-1-foundations/04-loss-functions-and-overfitting/
+Repository : Deep_Learning/foundations/04_loss_functions_and_overfitting/
 File       : implementation.py
+Python     : 3
 
 Sections:
   A │ Loss function implementations and comparisons (MSE, MAE, Huber, BCE, CE, Focal)
