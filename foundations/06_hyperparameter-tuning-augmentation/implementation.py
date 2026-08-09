@@ -1,10 +1,12 @@
 """
 Topic: Hyperparameter Tuning & Data Augmentation
 ===============================================================
-Repository : deep-learning/foundations/06-hyperparameter-tuning-augmentation/
+Repository : Deep_Learning/foundations/06_hyperparameter-tuning-augmentation/
 File       : implementation.py
+Python     : 3
 
-Sections:
+What this file demonstrates
+────────────────────────────
   A │ Grid Search vs Random Search — coverage comparison + best config
   B │ Learning rate schedules — step, cosine, warmup+cosine, plateau
   C │ Data Augmentation — Gaussian noise, feature dropout, Mixup
