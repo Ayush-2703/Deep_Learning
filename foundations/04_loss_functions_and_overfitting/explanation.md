@@ -1,4 +1,4 @@
-#Code Explanation: Loss Functions, Overfitting & Bias-Variance
+# Code Explanation: Loss Functions, Overfitting & Bias-Variance
 
 **`implementation.py` walkthrough**
 
