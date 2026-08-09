@@ -3,8 +3,10 @@ Topic: Linear Algebra, Calculus & PyTorch Tensor Fundamentals
 ===================================================================================
 Repository : deep-learning/foundations/07-extra-linear-algebra-pytorch-tensors/
 File       : implementation.py
+Python     : 3
 
-Sections:
+What this file demonstrates
+────────────────────────────
   A │ Core linear algebra operations — matmul, transpose, norms, dot/outer product
   B │ Matrix calculus verification — gradient identities checked via autograd
   C │ Eigendecomposition & SVD — visualized on a 2D transformation
