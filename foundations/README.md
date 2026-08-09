@@ -1,6 +1,6 @@
 <div align="center">
 
-![Phase 1: Foundations](https://capsule-render.vercel.app/api?type=waving&color=0:0B0C0E,50:363B45,100:586174&height=200&section=header&text=Phase%201:%20Foundations&Fields&fontSize=23&fontColor=ffffff&fontAlignY=25&animation=fadeIn&desc=Deep%20Learning&descSize=20&descAlignY=58)
+![Phase 1: Foundations](https://capsule-render.vercel.app/api?type=waving&color=0:0B0C0E,50:363B45,100:586174&height=200&section=header&text=Phase%201:%20Foundations&Fields&fontSize=50&fontColor=ffffff&fontAlignY=25&animation=fadeIn&desc=Deep%20Learning&descSize=20&descAlignY=58)
 <br/>
 **Made with ❤️ by [Ayush Kumar Singh](https://github.com/Ayush-2703)**
 </div>
