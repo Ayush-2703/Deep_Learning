@@ -5,7 +5,8 @@ Repository : Deep_Learning/foundations/04_loss_functions_and_overfitting/
 File       : implementation.py
 Python     : 3
 
-Sections:
+What this file demonstrates
+────────────────────────────
   A │ Loss function implementations and comparisons (MSE, MAE, Huber, BCE, CE, Focal)
   B │ Overfitting demonstration — model complexity sweep
   C │ Bias-variance decomposition experiment
