@@ -35,6 +35,7 @@ Every topic follows the repository's 3-file structure:
 | 03 | Object Detection — Faster R-CNN & YOLO | Synthetic multi-shape images with bounding boxes | Both a from-scratch YOLO-mini and a torchvision Faster R-CNN reach near-perfect detection (YOLO: P=1.00/R=0.99; Faster R-CNN: P=0.99/R=1.00) on this task, but Faster R-CNN costs ~54× more compute per epoch (97s vs. 1.8s) — a direct, measured demonstration of the one-stage vs. two-stage speed trade-off |
 | 04 | Segmentation — U-Net & Mask R-CNN | Synthetic per-pixel semantic + per-instance masks | U-Net reaches a perfect mIoU=1.0 (after a transient mid-training dip to ~0.67 that self-recovers, reported honestly); Mask R-CNN, trained on a reduced budget after a real background-process memory issue forced a pipeline redesign, reaches a more modest P=0.61/R=0.55 — explained rather than dressed up |
 | 05 | Transfer Learning & Fine-tuning | Synthetic large "source" task + small domain-shifted "target" task | A genuinely pretrained backbone is fine-tuned three ways: from-scratch (90.9% acc, wildly unstable), feature-extraction (87.9% acc, stable but capped), full fine-tuning (100% acc, fast and stable); discriminative (layer-wise) learning rates give the smoothest convergence of all four strategies tested |
+| 06 | Enhancement and Spatial |
 
 ## Notable engineering detours and honest findings (see each topic's explanation.md for full detail)
 
