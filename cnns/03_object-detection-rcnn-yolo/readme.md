@@ -1,6 +1,8 @@
-# Theory: Object Detection — Region-Based CNNs (Faster R-CNN) & YOLO
+<div align="center">
 
-**Deep Learning Mastery Repository**
+![Theory: Object Detection — Region-Based CNNs (Faster R-CNN) & YOLO](https://capsule-render.vercel.app/api?type=waving&color=0:0B0C0E,50:363B45,100:586174&height=200&section=header&text=Theory:%20Object%20Detection%20—%20Region-Based%20CNNs%20and%20YOLO&fontSize=30&fontColor=ffffff&fontAlignY=25&animation=fadeIn&desc=Deep%20Learning&descSize=25&descAlignY=58)
+
+</div>
 
 ---
 
