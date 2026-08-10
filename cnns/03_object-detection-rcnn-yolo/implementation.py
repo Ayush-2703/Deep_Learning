@@ -3,8 +3,10 @@ Topic: Object Detection — Faster R-CNN & YOLO
 =============================================================
 Repository : deep-learning/cnns/03-object-detection-rcnn-yolo/
 File       : implementation.py
+Python     : 3
 
-Sections:
+What this file demonstrates
+────────────────────────────
   A │ Synthetic object detection dataset (1-2 shapes/image, with bounding boxes)
   B │ IoU & NMS from scratch — verified against torchvision.ops
   C │ Anchor box generation — conceptual demo
