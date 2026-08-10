@@ -1,4 +1,9 @@
-# Phase 2: Convolutional Neural Networks
+<div align="center">
+
+![Phase 2: Convolutional Neural Networks](https://capsule-render.vercel.app/api?type=waving&color=0:0B0C0E,50:363B45,100:586174&height=200&section=header&text=Phase%202:%20Convolutional%20Neural%20Networks&fontSize=30&fontColor=ffffff&fontAlignY=25&animation=fadeIn&desc=Deep%20Learning&descSize=25&descAlignY=58)
+</div>
+
+---
 
 Five topics, each independently runnable, built on procedurally-generated
 synthetic image data (no internet dataset downloads — this environment has
