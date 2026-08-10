@@ -1,6 +1,6 @@
 <div align="center">
 
-![Theory: CNN Architectures — LeNet, AlexNet, VGGNet, ResNet, DenseNet, GoogLeNet](https://capsule-render.vercel.app/api?type=waving&color=0:0B0C0E,50:363B45,100:586174&height=200&section=header&text=Theory:%20CNN%20Architectures—LeNet,%20AlexNet,%20VGGNet,%20ResNet,%20DenseNet,%20GoogLeNet&fontSize=22&fontColor=ffffff&fontAlignY=25&animation=fadeIn&desc=Deep%20Learning&descSize=25&descAlignY=58)
+![Theory: CNN Architectures — LeNet, AlexNet, VGGNet, ResNet, DenseNet, GoogLeNet](https://capsule-render.vercel.app/api?type=waving&color=0:0B0C0E,50:363B45,100:586174&height=200&section=header&text=Theory:%20CNN%20Architectures—LeNet,%20AlexNet,%20VGGNet,%20ResNet,%20DenseNet,%20GoogLeNet&fontSize=20&fontColor=ffffff&fontAlignY=25&animation=fadeIn&desc=Deep%20Learning&descSize=25&descAlignY=58)
 
 </div>
 
