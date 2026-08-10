@@ -3,8 +3,10 @@ Topic: Convolutions, Kernels, Pooling & Receptive Fields
 =======================================================================
 Repository : deep-learning/cnns/01-convolution-basics/
 File       : implementation.py
+Python     : 3
 
-Sections:
+What this file demonstrates
+────────────────────────────
   A │ 1D convolution from scratch (NumPy) — verified against PyTorch nn.Conv1d
   B │ 2D convolution from scratch (NumPy) — verified against PyTorch nn.Conv2d
   C │ Classic hand-designed kernels — edge detection, blur, sharpen
