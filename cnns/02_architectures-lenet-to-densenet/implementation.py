@@ -3,13 +3,10 @@ Topic: CNN Architectures — LeNet, AlexNet, VGGNet, ResNet, DenseNet, GoogLeNet
 =============================================================================================
 Repository : deep-learning/cnns/02-architectures-lenet-to-densenet/
 File       : implementation.py
+Python     : 3
 
-All architectures are SCALED DOWN versions of the originals (fewer channels/layers)
-so that all 6 can be trained from scratch on CPU in reasonable time, while preserving
-every architecturally-defining feature (residual connections, dense concatenation,
-inception branches, etc.) described in theory.md.
-
-Sections:
+What this file demonstrates
+────────────────────────────
   A │ Synthetic "Shapes" dataset generator (5-class image classification, 32x32 RGB)
   B │ LeNet-5 (faithful to original, scaled for RGB 32x32 input)
   C │ AlexNet-mini (ReLU + Dropout, scaled channel counts)
