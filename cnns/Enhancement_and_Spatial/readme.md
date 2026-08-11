@@ -1,10 +1,7 @@
 <div align="center">
 
 ![Theory: Enhancement and Filtering Using CNN](https://capsule-render.vercel.app/api?type=waving&color=0:0B0C0E,50:363B45,100:586174&height=200&section=header&text=Theory:%20Enhancement%20and%20Filtering%20Using%20CNN&fontSize=30&fontColor=ffffff&fontAlignY=25&animation=fadeIn&desc=Deep%20Learning&descSize=25&descAlignY=58)
-
 </div>
-
----
 
 # 🖼️ Image Processing with Python — Blur & Sharpen Filters
 
