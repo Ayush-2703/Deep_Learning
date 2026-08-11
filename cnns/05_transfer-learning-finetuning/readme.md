@@ -1,4 +1,3 @@
-# Theory: 
 <div align="center">
 
 ![Theory: Transfer Learning & Fine-tuning](https://capsule-render.vercel.app/api?type=waving&color=0:0B0C0E,50:363B45,100:586174&height=200&section=header&text=Theory:%20Transfer%20Learning%20and%20Fine%20tuning&fontSize=30&fontColor=ffffff&fontAlignY=25&animation=fadeIn&desc=Deep%20Learning&descSize=25&descAlignY=58)
@@ -152,14 +151,14 @@ different target task.
 ### 3.4 Strategy Comparison Table
 
 ```
-                       Feature Extraction   Full Fine-tuning   Partial Fine-tuning
-─────────────────────────────────────────────────────────────────────────────────
-Trainable parameters    Fewest (head only)   All                Some (late layers + head)
-Overfitting risk         Lowest                 Highest            Medium
-Compute/memory cost       Lowest                 Highest            Medium
-Best for                  Tiny target data,       Large target data,  Medium target data,
-                          similar domain          different domain    moderately different domain
-Adaptation capacity       Limited                 Maximum             Moderate
+                       Feature Extraction    Full Fine-tuning          Partial Fine-tuning
+───────────────────────────────────────────────────────────────────────────────────────────────────
+Trainable parameters    Fewest (head only)    All                     Some (late layers + head)
+Overfitting risk        Lowest                Highest                 Medium
+Compute/memory cost     Lowest                Highest                 Medium
+Best for                Tiny target data,     Large target data,      Medium target data,
+                        similar domain        different domain        moderately different domain
+Adaptation capacity     Limited                Maximum                Moderate
 ```
 
 ---
