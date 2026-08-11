@@ -3,6 +3,8 @@ Topic: Transfer Learning & Fine-tuning
 ======================================================
 Repository : deep-learning/cnns/05-transfer-learning-finetuning/
 File       : implementation.py
+Python     : 3
+
 
 Since this environment has no internet access to download real pretrained
 ImageNet weights, we honestly SIMULATE the full transfer learning workflow:
@@ -13,7 +15,8 @@ This is methodologically identical to real-world transfer learning (the
 mechanics of freezing/fine-tuning are unaffected by whether the source task
 was ImageNet or a synthetic task) — only the specific pretrained features differ.
 
-Sections:
+What this file demonstrates
+────────────────────────────
   A │ Source dataset (large, solid-color shapes) + Target dataset (small, domain-shifted)
   B │ ResNet-style backbone (reused architecture pattern from Topic 2)
   C │ Pretrain on source task
