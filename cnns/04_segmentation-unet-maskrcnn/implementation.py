@@ -1,10 +1,12 @@
 """
 Topic: Segmentation — U-Net & Mask R-CNN
 ========================================================
-Repository : deep-learning/cnns/04-segmentation-unet-maskrcnn/
+Repository : Deep_Learning/cnns/04_segmentation-unet-maskrcnn/
 File       : implementation.py
+Python     : 3
 
-Sections:
+What this file demonstrates
+────────────────────────────
   A │ Synthetic segmentation datasets (semantic masks + per-instance masks)
   B │ U-Net — FULLY from scratch (encoder-decoder with skip connections)
   C │ Dice Loss & combined BCE+Dice loss — verified properties
