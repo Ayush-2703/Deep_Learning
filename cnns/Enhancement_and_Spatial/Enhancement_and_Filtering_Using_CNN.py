@@ -1,3 +1,17 @@
+"""
+Topic: Transfer Learning & Fine-tuning
+======================================================
+Repository : Deep_Learning/cnns/Enhancement_and_Spatial/
+File       : implementation.py
+Python     : 3
+
+
+What this file demonstrates
+────────────────────────────
+  A │ 
+"""
+
+
 import cv2
 import numpy as np
 from PIL import Image, ImageFilter
