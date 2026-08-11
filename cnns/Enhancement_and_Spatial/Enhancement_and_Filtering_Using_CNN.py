@@ -1,5 +1,5 @@
 """
-Topic: Transfer Learning & Fine-tuning
+Topic: Enhancement and Filtering Using CNN
 ======================================================
 Repository : Deep_Learning/cnns/Enhancement_and_Spatial/
 File       : implementation.py
@@ -8,7 +8,7 @@ Python     : 3
 
 What this file demonstrates
 ────────────────────────────
-  A │ 
+  A │  Blur & Sharpen Filters
 """
 
 
