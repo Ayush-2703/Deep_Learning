@@ -277,35 +277,35 @@ Speedup: ~10× faster than Fast R-CNN, AND fully end-to-end trainable
 Input Image
     │
     ▼
-┌─────────────────┐
+┌──────────────────┐
 │  Backbone CNN    │   (e.g. ResNet, VGG — shared feature extractor)
 │  (+ optional FPN)│
 └────────┬─────────┘
          │  shared feature map
          ▼
-┌─────────────────────────┐
+┌──────────────────────────┐
 │ Region Proposal Network  │
 │  (RPN)                   │
-│  - slides anchors over    │
-│    feature map            │
-│  - predicts: objectness   │
-│    score + box deltas     │
-│    PER ANCHOR              │
+│  - slides anchors over   │
+│    feature map           │
+│  - predicts: objectness  │
+│    score + box deltas    │
+│    PER ANCHOR            │
 └────────┬─────────────────┘
          │  ~2000 raw proposals → NMS → ~300 proposals
          ▼
-┌─────────────────────────┐
-│  RoI Align                │   (extracts fixed-size feature per proposal
+┌──────────────────────────┐
+│  RoI Align               │   (extracts fixed-size feature per proposal
 └────────┬─────────────────┘    from the SAME shared feature map)
          │
          ▼
-┌─────────────────────────┐
-│  Detection Head           │
-│  - Classification (softmax │
-│    over C classes + bg)    │
+┌─────────────────────────────┐
+│  Detection Head             │
+│  - Classification (softmax  │
+│    over C classes + bg)     │
 │  - Box regression (per-class│
-│    refinement)             │
-└────────┬─────────────────┘
+│    refinement)              │
+└────────┬────────────────────┘
          │
          ▼
    Final detections (after per-class NMS)
@@ -471,9 +471,9 @@ the rare cells that DO contain objects.
 ## 9. Two-Stage vs One-Stage: Trade-offs
 
 ```
-                       Two-Stage (Faster R-CNN)     One-Stage (YOLO)
-─────────────────────────────────────────────────────────────────────
-Speed                  Slower (multiple stages)      Faster (single pass)
+                       Two-Stage (Faster R-CNN)          One-Stage (YOLO)
+──────────────────────────────────────────────────────────────────────────────
+Speed                  Slower (multiple stages)        Faster (single pass)
 Accuracy (small objs)  Generally better                Historically weaker
                                                         (improved a lot in
                                                          later YOLO versions)
