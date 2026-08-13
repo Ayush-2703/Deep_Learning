@@ -335,3 +335,11 @@ Each subplot is displayed without axis ticks (`axis('off')`) for a clean visual 
 ---
 
 > **Tip:** To experiment further, try replacing the kernel values in `volvo8_sharpen` or `general_sharpen` with other kernels such as edge detection (Sobel, Prewitt), emboss, or motion blur kernels to observe different effects.
+
+---
+
+<div align="center">
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0B0C0E,50:363B45,100:586174&height=70&section=footer" width="100%"/>
+
+</div>
