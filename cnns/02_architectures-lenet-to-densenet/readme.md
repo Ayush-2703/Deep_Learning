@@ -519,3 +519,10 @@ Educational/historical baseline: LeNet (simplicity), VGGNet (uniformity)
 | ResNet | y = F(x) + x; gradient = ∂F/∂x + 1 (skip term prevents vanishing) |
 | DenseNet | xₗ = Hₗ([x₀,x₁,...,x_{l-1}]); channels grow by k per layer |
 
+---
+
+<div align="center">
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0B0C0E,50:363B45,100:586174&height=70&section=footer" width="100%"/>
+
+</div>
