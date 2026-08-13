@@ -56,6 +56,13 @@ Run any topic standalone:
 cd 0X-topic-name/
 python3 implementation.py
 ```
+---
+
+<div align="center">
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0B0C0E,50:363B45,100:586174&height=70&section=footer" width="100%"/>
+
+</div>
 
 Requires: `torch`, `numpy`, `matplotlib`, `scikit-learn`. CPU-only, no
 GPU/CUDA needed, no internet dataset downloads.
