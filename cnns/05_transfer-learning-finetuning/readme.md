@@ -375,3 +375,11 @@ approach for any SPECIFIC source/target pairing.
 | Discriminative LR | early layers: low LR, late layers: high LR |
 | Frozen BatchNorm | must ALSO call `.eval()`, not just freeze weight/bias |
 | Strategy by data size | tiny→feature extraction, large→full fine-tuning |
+
+---
+
+<div align="center">
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0B0C0E,50:363B45,100:586174&height=70&section=footer" width="100%"/>
+
+</div>
