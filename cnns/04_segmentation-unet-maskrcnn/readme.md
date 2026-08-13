@@ -363,3 +363,11 @@ IoU as the matching criterion for determining true/false positives.
 | IoU (Jaccard) | \|A∩B\| / \|A∪B\| |
 | Mask R-CNN total loss | L_cls + L_box + L_mask |
 | Mean IoU | (1/C)Σ_c TP_c/(TP_c+FP_c+FN_c) |
+
+---
+
+<div align="center">
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0B0C0E,50:363B45,100:586174&height=70&section=footer" width="100%"/>
+
+</div>
