@@ -85,3 +85,11 @@ no GPU/CUDA needed, no internet dataset downloads. Topics 02–05 involve
 longer training runs (minutes, not seconds); Topics 03 and 04 in particular
 can take several hundred seconds for the torchvision-based detector/instance
 segmentation models.
+
+---
+
+<div align="center">
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0B0C0E,50:363B45,100:586174&height=70&section=footer" width="100%"/>
+
+</div>
