@@ -59,6 +59,7 @@ python3 implementation.py
 
 Requires: `torch`, `numpy`, `matplotlib`, `scikit-learn`. CPU-only, no
 GPU/CUDA needed, no internet dataset downloads.
+
 ---
 
 <div align="center">
