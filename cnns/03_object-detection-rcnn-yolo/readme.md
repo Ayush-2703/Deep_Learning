@@ -545,3 +545,11 @@ in mAP to allow direct comparison despite their very different architectures.
 | YOLO coord loss | λ_coord·𝟙^obj·[(x−x̂)²+(y−ŷ)²+(√w−√ŵ)²+(√h−√ĥ)²] |
 | Precision / Recall | TP/(TP+FP),  TP/(TP+FN) |
 | mAP | (1/C)Σ_c AP_c |
+
+---
+
+<div align="center">
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0B0C0E,50:363B45,100:586174&height=70&section=footer" width="100%"/>
+
+</div>
