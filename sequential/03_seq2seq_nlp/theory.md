@@ -1,4 +1,3 @@
-# Theory: 
 <div align="center">
 
 ![Theory: Seq2Seq, Attention & Teacher Forcing](https://capsule-render.vercel.app/api?type=waving&color=0:0B0C0E,50:363B45,100:586174&height=200&section=header&text=Theory:%20Seq2Seq,%20Attention%20and%20Teacher%20Forcing&Fields&fontSize=30&fontColor=ffffff&fontAlignY=25&animation=fadeIn&desc=Deep%20Learning&descSize=25&descAlignY=58)
@@ -261,6 +260,7 @@ zero. BLEU is widely used but increasingly complemented by learned metrics
 | Scaled dot-product | eₜⱼ = sₜᵀhⱼ/√d |
 | BLEU brevity penalty | BP = min(1, exp(1-ref_len/hyp_len)) |
 
+---
 
 <div align="center">
 
