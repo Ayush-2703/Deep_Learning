@@ -43,10 +43,10 @@ Encoder RNN:   reads the SOURCE sequence, compresses it into a fixed-size
 Decoder RNN:   generates the TARGET sequence token-by-token, conditioned
                on c and all previously generated tokens
 
-              ┌────────────────────┐    c    ┌───────────────────────┐
-SOURCE ──────►│    Encoder RNN      │──────►│    Decoder RNN          │──► TARGET
-              │  h₁,h₂,...,hₜ      │        │  generates y₁,y₂,...,yₜ│
-              └────────────────────┘        └───────────────────────┘
+              ┌────────────────────┐   c   ┌───────────────────────┐
+SOURCE ──────►│    Encoder RNN     │──────►│    Decoder RNN        │──► TARGET
+              │  h₁,h₂,...,hₜ       │       │ generates y₁,y₂,...,yₜ│
+              └────────────────────┘       └───────────────────────┘
 ```
 
 ### The Information Bottleneck Problem
