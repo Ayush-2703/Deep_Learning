@@ -1,7 +1,8 @@
-# Theory: LSTM & GRU — Gated Recurrent Architectures
+<div align="center">
 
-**Deep Learning Mastery Repository**
+![Theory: LSTM and GRU — Gated Recurrent Architectures](https://capsule-render.vercel.app/api?type=waving&color=0:0B0C0E,50:363B45,100:586174&height=200&section=header&text=Theory:%20LSTM%20and%20GRU%20—%20Gated%20Recurrent%20Architectures&Fields&fontSize=30&fontColor=ffffff&fontAlignY=25&animation=fadeIn&desc=Deep%20Learning&descSize=25&descAlignY=58)
 
+</div>
 ---
 
 ## 1. Why Gating Solves the Vanishing Gradient Problem
@@ -82,3 +83,8 @@ Vanilla RNNs essentially never solve this beyond length~100; LSTMs do reliably.
 | hₜ = (1−zₜ)⊙h_{t-1} + zₜ⊙h̃ₜ | GRU hidden update |
 | ∂Cₜ/∂C_{t-1} = fₜ | Gradient preserves when fₜ≈1 |
 
+<div align="center">
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0B0C0E,50:363B45,100:586174&height=70&section=footer" width="100%"/>
+
+</div>
