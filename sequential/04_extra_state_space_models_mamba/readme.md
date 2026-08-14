@@ -1,6 +1,9 @@
-# Theory: State Space Models — S4 & Mamba
+# Theory: 
+<div align="center">
 
-**Deep Learning Mastery Repository**
+![Theory: State Space Models — S4 & Mamba](https://capsule-render.vercel.app/api?type=waving&color=0:0B0C0E,50:363B45,100:586174&height=200&section=header&text=Theory:%20State%20Space%20Models%20—%20S4%20and%20Mamba&Fields&fontSize=30&fontColor=ffffff&fontAlignY=25&animation=fadeIn&desc=Deep%20Learning&descSize=25&descAlignY=58)
+
+</div>
 
 ---
 
@@ -383,3 +386,11 @@ content-based reasoning capability that pure LTI SSMs lacked.
 | HiPPO-LegS (n>k) | A_{nk}=√(2n+1)√(2k+1) |
 | Mamba selection | Δₜ,Bₜ,Cₜ = f(uₜ)  (input-dependent) |
 | Selective recurrence | hₜ=Āₜh_{t-1}+B̄ₜuₜ, yₜ=Cₜhₜ |
+
+---
+
+<div align="center">
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0B0C0E,50:363B45,100:586174&height=70&section=footer" width="100%"/>
+
+</div>
