@@ -300,14 +300,14 @@ the theoretical minimum loss of a hard one-hot target).
                         RNN Seq2Seq+Attn           Transformer
                         (Phase 3 Topic 3)
 ─────────────────────────────────────────────────────────────────────────
-Cross-position mixing    Sequential RNN           Self-attention
-                         recurrence + Bahdanau   (parallel, direct)
+Cross-position mixing    Sequential RNN              Self-attention
+                         recurrence + Bahdanau     (parallel, direct)
                          attention for cross-seq
 
-Training parallelism     Sequential per           FULLY parallel across
-                         time-step (even with     sequence positions
-                         teacher forcing, the      (causal mask lets ALL
-                         decoder RNN must           positions' losses be
+Training parallelism     Sequential per              FULLY parallel across
+                         time-step (even with        sequence positions
+                         teacher forcing, the        (causal mask lets ALL
+                         decoder RNN must            positions' losses be
                          still unroll step-by-      computed in ONE
                          step)                      forward pass)
 
