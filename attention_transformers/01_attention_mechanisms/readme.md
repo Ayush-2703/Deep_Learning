@@ -1,8 +1,12 @@
-# Theory: Attention Mechanisms — Scaled Dot-Product & Multi-Head Attention
+# Theory: 
+<div align="center">
 
-**Deep Learning Mastery Repository**
-
+![Theory:  Attention Mechanisms](https://capsule-render.vercel.app/api?type=waving&color=0:0B0C0E,50:363B45,100:586174&height=200&section=header&text=Theory:%20Attention%20Mechanisms&Fields&fontSize=30&fontColor=ffffff&fontAlignY=25&animation=fadeIn&desc=Deep%20Learning&descSize=25&descAlignY=58)
+</br>
+ # Attention Mechanisms — Scaled Dot-Product & Multi-Head Attention
+</div>
 ---
+
 
 ## Table of Contents
 1. [From Bahdanau/Luong Attention to Self-Attention](#1-from-bahdanaulu-attention-to-self-attention)
@@ -331,3 +335,10 @@ that table.
 | Sinusoidal PE (odd dims) | cos(pos/10000^(2i/d_model)) |
 | Self-attention complexity | O(L²·d_model) |
 
+---
+
+<div align="center">
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0B0C0E,50:363B45,100:586174&height=70&section=footer" width="100%"/>
+
+</div>
