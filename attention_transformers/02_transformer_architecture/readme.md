@@ -38,8 +38,8 @@ Positional          └───────┬─────────┘   
       │              ┌───────────────┐                            ▼
       │              │  Feed-Forward │                   ┌─────────────────┐
       │              └───────┬───────┘                   │ Cross-Attention │◄──── ENCODER
-      │                       │  +residual, norm         │ (Q=decoder,     │      OUTPUT
-      │                       ▼                          │  K,V=encoder)   │
+      │                      │  +residual, norm          │ (Q=decoder,     │      OUTPUT
+      │                      ▼                           │  K,V=encoder)   │
       │              (repeat N times)                    └─────────┬───────┘
       │                       │                                    │  +residual, norm
       │                       ▼                                    ▼
