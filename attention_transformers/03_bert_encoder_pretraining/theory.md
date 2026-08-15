@@ -1,6 +1,8 @@
-# Theory: BERT — Bidirectional Encoder Pretraining
+<div align="center">
 
-**Deep Learning Mastery Repository**
+![Theory: Bidirectional Encoder Pretraining](https://capsule-render.vercel.app/api?type=waving&color=0:0B0C0E,50:363B45,100:586174&height=200&section=header&text=Theory:%20Bidirectional%20Encoder%20Pretraining(BERT)&Fields&fontSize=30&fontColor=ffffff&fontAlignY=25&animation=fadeIn&desc=Deep%20Learning&descSize=25&descAlignY=58)
+
+</div>
 
 ---
 
@@ -263,3 +265,11 @@ autoregressive-generation family.
 | Input embedding | TokenEmb + PositionEmb(learned) + SegmentEmb |
 | NSP task | Binary classification from [CLS]: IsNext vs NotNext |
 | Fine-tuning strategies | Feature extraction / Full fine-tune / Discriminative LR (Phase 2 Topic 5) |
+
+---
+
+<div align="center">
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0B0C0E,50:363B45,100:586174&height=70&section=footer" width="100%"/>
+
+</div>
