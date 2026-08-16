@@ -1,4 +1,3 @@
-# Theory: 
 <div align="center">
 
 ![Theory: Vision Transformer (ViT)](https://capsule-render.vercel.app/api?type=waving&color=0:0B0C0E,50:363B45,100:586174&height=200&section=header&text=Theory:%20Vision%20Transformer%20(ViT)&Fields&fontSize=30&fontColor=ffffff&fontAlignY=25&animation=fadeIn&desc=Deep%20Learning&descSize=25&descAlignY=58)
@@ -226,3 +225,11 @@ already done useful local preprocessing.
 | Number of patches | (H/P)×(W/P) |
 | ViT input sequence | [CLS] + patch₁ + ... + patch_N (+ position embeddings) |
 | Classification | Linear([CLS]_final) → class logits |
+
+---
+
+<div align="center">
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0B0C0E,50:363B45,100:586174&height=70&section=footer" width="100%"/>
+
+</div>
