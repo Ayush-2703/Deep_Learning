@@ -1,4 +1,10 @@
-# Large Language Models: BERT (encoder, MLM) vs. GPT (decoder, causal LM)
+<div align="center">
+
+![Theory: Large Language Models: BERT vs. GPT](https://capsule-render.vercel.app/api?type=waving&color=0:0B0C0E,50:363B45,100:586174&height=200&section=header&text=Theory:%20Large%20Language%20Models:%20BERT%20vs.%20GPT&Fields&fontSize=30&fontColor=ffffff&fontAlignY=25&animation=fadeIn&desc=Deep%20Learning&descSize=25&descAlignY=58)
+
+</div>
+
+---
 
 ## 1. Scope note relative to Phase 4
 
@@ -102,3 +108,11 @@ specifically to keep CPU training feasible within this repository's
 constraints while still exercising the real mechanism (causal vs.
 bidirectional masking, MLM vs. CLM loss) — the architectural and
 objective-level lessons transfer; the absolute scale does not.
+
+---
+
+<div align="center">
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0B0C0E,50:363B45,100:586174&height=70&section=footer" width="100%"/>
+
+</div>
