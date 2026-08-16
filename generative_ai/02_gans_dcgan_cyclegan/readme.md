@@ -1,4 +1,10 @@
-# Generative Adversarial Networks (GANs) — DCGAN and CycleGAN
+<div align="center">
+
+![Theory: Generative Adversarial Networks (GANs) — DCGAN and CycleGAN](https://capsule-render.vercel.app/api?type=waving&color=0:0B0C0E,50:363B45,100:586174&height=200&section=header&text=Theory:%20Generative%20Adversarial%20Networks%20(GANs)%20—%20DCGAN%20and%20CycleGAN&Fields&fontSize=30&fontColor=ffffff&fontAlignY=25&animation=fadeIn&desc=Deep%20Learning&descSize=25&descAlignY=58)
+
+</div>
+
+---
 
 ## 1. The adversarial game
 
@@ -103,3 +109,11 @@ error still non-trivial after limited epochs), this is reported honestly in
 - **Discriminator overpowering generator**: if `D` reaches near-perfect
   accuracy early, `G`'s gradient signal vanishes. Watch `D(real)` and
   `D(fake)` probabilities directly, not just the loss values.
+
+---
+
+<div align="center">
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0B0C0E,50:363B45,100:586174&height=70&section=footer" width="100%"/>
+
+</div>
