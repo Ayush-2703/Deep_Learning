@@ -1,6 +1,8 @@
-# Theory: GPT — Decoder-Only Autoregressive Generation
+<div align="center">
 
-**Deep Learning Mastery Repository**
+![Theory: GPT — Decoder-Only Autoregressive Generation](https://capsule-render.vercel.app/api?type=waving&color=0:0B0C0E,50:363B45,100:586174&height=200&section=header&text=Theory:%20GPT%20—%20Decoder-Only%20Autoregressive%20Generation&Fields&fontSize=30&fontColor=ffffff&fontAlignY=25&animation=fadeIn&desc=Deep%20Learning&descSize=25&descAlignY=58)
+
+</div>
 
 ---
 
@@ -288,3 +290,11 @@ became the foundation for essentially all major large language models.
 | Top-k sampling | restrict to top-k tokens, renormalize, sample |
 | Perplexity | exp(-1/N · Σᵢ log P(xᵢ\|x<ᵢ)) = exp(avg cross-entropy) |
 | KV-cache generation cost | O(1) per step (vs O(L) naive re-processing) |
+
+---
+
+<div align="center">
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0B0C0E,50:363B45,100:586174&height=70&section=footer" width="100%"/>
+
+</div>
