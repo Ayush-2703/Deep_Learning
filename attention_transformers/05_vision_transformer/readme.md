@@ -1,6 +1,9 @@
-# Theory: Vision Transformer (ViT)
+# Theory: 
+<div align="center">
 
-**Deep Learning Mastery Repository**
+![Theory: Vision Transformer (ViT)](https://capsule-render.vercel.app/api?type=waving&color=0:0B0C0E,50:363B45,100:586174&height=200&section=header&text=Theory:%20Vision%20Transformer%20(ViT)&Fields&fontSize=30&fontColor=ffffff&fontAlignY=25&animation=fadeIn&desc=Deep%20Learning&descSize=25&descAlignY=58)
+
+</div>
 
 ---
 
