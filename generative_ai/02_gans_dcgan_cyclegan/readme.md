@@ -1,6 +1,6 @@
 <div align="center">
 
-![Theory: Generative Adversarial Networks (GANs) — DCGAN and CycleGAN](https://capsule-render.vercel.app/api?type=waving&color=0:0B0C0E,50:363B45,100:586174&height=200&section=header&text=Theory:%20Generative%20Adversarial%20Networks%20(GANs)%20—%20DCGAN%20and%20CycleGAN&Fields&fontSize=30&fontColor=ffffff&fontAlignY=25&animation=fadeIn&desc=Deep%20Learning&descSize=25&descAlignY=58)
+![Theory: Generative Adversarial Networks (GANs) — DCGAN and CycleGAN](https://capsule-render.vercel.app/api?type=waving&color=0:0B0C0E,50:363B45,100:586174&height=200&section=header&text=Theory:%20Generative%20Adversarial%20Networks%20(GANs)%20—%20DCGAN%20and%20CycleGAN&Fields&fontSize=25&fontColor=ffffff&fontAlignY=25&animation=fadeIn&desc=Deep%20Learning&descSize=25&descAlignY=58)
 
 </div>
 
