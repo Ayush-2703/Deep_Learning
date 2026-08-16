@@ -1,6 +1,11 @@
 <div align="center">
 
-![Phase 4: Attention & Transformers](https://capsule-render.vercel.app/api?type=waving&color=0:0B0C0E,50:363B45,100:586174&height=200&section=header&text=Phase%204:%20Attention%20%26%20Transformers&fontSize=30&fontColor=ffffff&fontAlignY=25&animation=fadeIn&desc=Deep%20Learning&descSize=25&descAlignY=58)
+![]
+![Phase 4: Attention & Transformers](https://capsule-render.vercel.app/api?type=waving&color=0:0B0C0E,50:363B45,100:586174&height=200&section=header&text=Phase%204:%20Attention%20and%20Transformers&Fields&fontSize=30&fontColor=ffffff&fontAlignY=25&animation=fadeIn&desc=Deep%20Learning&descSize=25&descAlignY=58)
+
+</div>
+
+---
 
 **Made with ❤️ by [Ayush Kumar Singh](https://github.com/Ayush-2703)**
 
