@@ -1,4 +1,10 @@
-# Denoising Diffusion Probabilistic Models (DDPM)
+<div align="center">
+
+![Theory: Denoising Diffusion Probabilistic Models](https://capsule-render.vercel.app/api?type=waving&color=0:0B0C0E,50:363B45,100:586174&height=200&section=header&text=Theory:%20Denoising%20Diffusion%20Probabilistic%20Models&fontSize=30&fontColor=ffffff&fontAlignY=25&animation=fadeIn&desc=Deep%20Learning&descSize=25&descAlignY=58)
+
+</div>
+
+---
 
 ## 1. The core idea
 
@@ -111,3 +117,11 @@ convolutional U-Net.
 | Sampling speed        | 1 pass       | 1 pass           | T sequential passes |
 | Likelihood-based      | Yes (ELBO)   | No               | Yes (ELBO-derived) |
 | Mode coverage         | Good         | Prone to collapse| Good            |
+
+---
+
+<div align="center">
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0B0C0E,50:363B45,100:586174&height=70&section=footer" width="100%"/>
+
+</div>
