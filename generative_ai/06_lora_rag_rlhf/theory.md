@@ -1,4 +1,10 @@
-# LoRA, RAG, and RLHF
+<div align="center">
+
+![Theory: LoRA, RAG, and RLHF](https://capsule-render.vercel.app/api?type=waving&color=0:0B0C0E,50:363B45,100:586174&height=200&section=header&text=Theory:%20LoRA,%20RAG,%20and%20RLHF&Fields&fontSize=30&fontColor=ffffff&fontAlignY=25&animation=fadeIn&desc=Deep%20Learning&descSize=25&descAlignY=58)
+
+</div>
+
+---
 
 Three widely-used techniques for adapting and controlling pretrained
 language models, each solving a different problem. This topic covers all
