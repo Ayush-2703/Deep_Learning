@@ -123,3 +123,11 @@ with a cheap Jacobian).
 - Numerical stability of `exp(s(z_1))` requires care — unclamped scale
   networks can produce exploding or vanishing volume changes early in
   training.
+
+---
+
+<div align="center">
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0B0C0E,50:363B45,100:586174&height=70&section=footer" width="100%"/>
+
+</div>
