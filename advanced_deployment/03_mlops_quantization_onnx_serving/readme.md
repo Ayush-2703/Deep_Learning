@@ -1,4 +1,10 @@
-# MLOps: Quantization, ONNX Export, and Serving
+<div align="center">
+
+![Theory: MLOps: Quantization, ONNX Export, and Serving](https://capsule-render.vercel.app/api?type=waving&color=0:0B0C0E,50:363B45,100:586174&height=200&section=header&text=Theory:%20MLOps:%20Quantization,%20ONNX%20Export,%20and%20Serving&Fields&fontSize=30&fontColor=ffffff&fontAlignY=25&animation=fadeIn&desc=Deep%20Learning&descSize=25&descAlignY=58)
+
+</div>
+
+---
 
 ## 1. Why this topic exists — the gap between "trained" and "deployed"
 
@@ -81,3 +87,11 @@ overhead (the runtime int8-conversion of activations) that can offset gains
 on a network this small. This implementation reports whichever result
 actually occurs, rather than assuming quantization must make things faster
 in every case.
+
+---
+
+<div align="center">
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0B0C0E,50:363B45,100:586174&height=70&section=footer" width="100%"/>
+
+</div>
