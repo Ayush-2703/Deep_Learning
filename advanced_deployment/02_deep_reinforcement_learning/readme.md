@@ -1,4 +1,10 @@
-# Deep Reinforcement Learning: Deep Q-Networks (DQN)
+<div align="center">
+
+![Theory: Deep Reinforcement Learning: Deep Q-Networks (DQN)](https://capsule-render.vercel.app/api?type=waving&color=0:0B0C0E,50:363B45,100:586174&height=200&section=header&text=Theory:%20Deep%20Reinforcement%20Learning:%20Deep%20Q-Networks&Fields&fontSize=30&fontColor=ffffff&fontAlignY=25&animation=fadeIn&desc=Deep%20Learnng&descSize=25&descAlignY=58)
+
+</div>
+
+---
 
 ## 1. The RL problem setup
 
@@ -97,3 +103,10 @@ TD-error minimization).
   before the Q-estimates are reliable, or a replay buffer too small to
   cover enough of the state space) — not something to hide.
 
+---
+
+<div align="center">
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0B0C0E,50:363B45,100:586174&height=70&section=footer" width="100%"/>
+
+</div>
