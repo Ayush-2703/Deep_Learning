@@ -99,3 +99,11 @@ classified correctly purely from their neighborhood's identity — this
 implementation verifies that claim directly by comparing a GCN against an
 identical-depth MLP baseline trained on the same node features with the
 graph structure hidden from it.
+
+---
+
+<div align="center">
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0B0C0E,50:363B45,100:586174&height=70&section=footer" width="100%"/>
+
+</div>
