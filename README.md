@@ -375,14 +375,14 @@ scikit-learn ≥ 1.3
 
 | Phase | Topics | Status |
 |---|---|---|
-| Phase 1 — Foundations | 7 topics | 🟩🟩⬜⬜⬜⬜⬜ In Progress |
-| Phase 2 — CNNs | 5 topics | ⬜ Not Started |
-| Phase 3 — Sequential | 4 topics | ⬜ Not Started |
-| Phase 4 — Attention & Transformers | 3 topics | ⬜ Not Started |
-| Phase 5 — Generative AI & LLMs | 5 topics | ⬜ Not Started |
-| Phase 6 — Advanced & Deployment | 3 topics | ⬜ Not Started |
+| Phase 1 — Foundations | 7 topics | 🟩 Completed |
+| Phase 2 — CNNs | 5 topics | 🟩 Completed |
+| Phase 3 — Sequential | 4 topics | 🟩 Completed |
+| Phase 4 — Attention & Transformers | 3 topics | 🟩 Completed |
+| Phase 5 — Generative AI & LLMs | 5 topics | 🟩 Completed |
+| Phase 6 — Advanced & Deployment | 3 topics | 🟩 Completed |
 
-**Overall: 2 / 27 topics complete**
+**Overall: 27 / 27 topics completed**
 
 > ⭐ Star the repo to get notified when new topics drop.
 
