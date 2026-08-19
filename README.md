@@ -314,39 +314,6 @@ https://colab.research.google.com/github/Ayush-2703/deep-learning-mastery
 
 ---
 
-## 📁 Repository Structure
-
-```
-deep-learning-mastery/
-│
-├── README.md
-├── requirements.txt
-├── .github/
-│   └── workflows/
-│       └── ci.yml                  ← Auto-test all implementations
-│
-├── phase-1-foundations/
-│   └── 01-perceptron-and-mlp/
-│       ├── theory.md               ← 9 sections, UAT proof, convergence bound
-│       ├── implementation.py       ← 430+ lines, 7 self-contained sections
-│       └── explanation.md          ← 10 sections, 10-bug pitfall table
-│
-│   └── 02-activation-functions/
-│       ├── theory.md               ← 9 sections, vanishing gradient bound (0.25)^L
-│       ├── implementation.py       ← 580+ lines, hook-based dead neuron counter
-│       └── explanation.md          ← 8 sections, closure-based hook deep dive
-│
-│   └── ...                         ← All 7 topics, same structure
-│
-├── phase-2-cnns/                   ← Coming next
-├── phase-3-sequential/
-├── phase-4-attention-transformers/
-├── phase-5-generative-ai/
-└── phase-6-advanced-deployment/
-```
-
----
-
 ## 🛠 Prerequisites
 
 **Python knowledge assumed:**
