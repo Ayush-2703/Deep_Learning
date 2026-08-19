@@ -384,7 +384,6 @@ scikit-learn ≥ 1.3
 
 **Overall: 27 / 27 topics completed**
 
-> ⭐ Star the repo to get notified when new topics drop.
 
 ---
 
