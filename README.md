@@ -64,7 +64,7 @@ Most deep learning resources give you one of three things: theory without code, 
 | ✅ Empirical proof of theoretical claims | ❌ Theory disconnected from results |
 | ✅ CPU + GPU compatible, zero config | ❌ Environment hell |
 
----
+------
 
 ## 🔩 The 3-Component System
 
