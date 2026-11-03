@@ -49,7 +49,7 @@ Every topic ships with rigorous mathematical theory, production-grade PyTorch co
 - [Contributing](#-contributing)
 - [Author](#-author)
 
----
+--------
 
 ## 🎯 Why This Repository
 
